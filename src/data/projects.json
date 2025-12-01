@@ -1,0 +1,152 @@
+[
+  {
+    "id": "bitcoin-analytics-suite",
+    "title": "Bitcoin Analytics Suite",
+    "summary": "Comprehensive Bitcoin market analysis platform with real-time price tracking, volatility analysis, and predictive modeling.",
+    "thumbnail": "/images/thumbnails/FinancialPrediction.png",
+    "tags": [
+      "Python",
+      "Bitcoin",
+      "Time Series Analysis",
+      "Data Visualization",
+      "Cryptocurrency"
+    ],
+    "category": [
+      "Data Analytics",
+      "Finance"
+    ],
+    "featured": true,
+    "grid_config": "col-span-2 row-span-2",
+    "metrics": [
+      { "label": "Data Points", "value": "Real-time" },
+      { "label": "Analysis Type", "value": "Predictive" },
+      { "label": "Market Coverage", "value": "Global" }
+    ],
+    "links": {
+      "github": "https://github.com/username/bitcoin-analytics-suite"
+    },
+    "theme_color": "#f7931a"
+  },
+  {
+  "id": "employee-attrition-analytics",
+  "title": "Employee Attrition Analytics Dashboard",
+  "summary": "Power BI dashboard to analyze employee turnover (16.12%) and uncover key attrition drivers across Sales & R&D departments. Delivered actionable HR retention initiatives targeting a -5% attrition reduction within 1 year.",
+  "thumbnail": "/images/thumbnails/SummaryDashboard.png",
+  "tags": [
+    "Power BI",
+    "HR Analytics",
+    "Data Visualization",
+    "DAX",
+    "Business Intelligence"
+  ],
+  "category": [
+    "Visualization",
+    "Business Intelligence"
+  ],
+  "featured": true,
+  "grid_config": "col-span-2 row-span-2",
+  "metrics": [
+    { "label": "Attrition Rate", "value": "16.12%" },
+    { "label": "High-Risk Employees", "value": "6.53%" },
+    { "label": "Target Attrition Improvement", "value": "-5% / year" }
+  ],
+  "links": {
+    "github": "https://github.com/syahrul-kustiawan-alzayyan/HR-Analysis-dashboard"
+  },
+  "theme_color": "#00A3E0"
+}
+,
+  {
+  "id": "kimia-farma-big-data-analytics",
+  "title": "Kimia Farma Big Data Analytics Project",
+  "summary": "BigQuery & Looker Studio based performance analytics (2020–2023) for evaluating revenue trends, profitability, and customer experience across Kimia Farma branches. Delivered actionable business insights through a centralized analytics dashboard.",
+  "thumbnail": "/images/thumbnails/PerfomanceOverview.png",
+  "tags": [
+    "BigQuery",
+    "SQL",
+    "Looker Studio",
+    "Data Warehousing",
+    "Business Intelligence",
+    "Google Cloud Platform"
+  ],
+  "category": [
+    "Business Analytics",
+    "Business Intelligence"
+  ],
+  "featured": true,
+  "grid_config": "col-span-2 row-span-2",
+  "metrics": [
+    { "label": "Period Analyzed", "value": "2020–2023" },
+    { "label": "Datasets Used", "value": "4 Tables" },
+    { "label": "Platform", "value": "Google BigQuery" }
+  ],
+  "links": {
+    "github": "https://github.com/syahrul-kustiawan-alzayyan/Kimia-Farma-Big-Data-Analytics"
+  },
+  "theme_color": "#FF6B00"
+},
+  {
+    "id": "etl-pipeline-python",
+    "title": "Automated ETL Pipeline",
+    "summary": "Built a robust ETL pipeline using Python and Airflow to process 1M+ daily records, reducing manual processing time by 80%.",
+    "thumbnail": "/images/thumbnails/SummaryDashboard.png",
+    "tags": ["Python", "Airflow", "ETL", "PostgreSQL", "Data Engineering"],
+    "category": [
+      "Data Engineering",
+      "Automation"
+    ],
+    "featured": true,
+    "grid_config": "col-span-1 row-span-1",
+    "metrics": [
+      { "label": "Records/Day", "value": "1M+" },
+      { "label": "Time Saved", "value": "80%" }
+    ],
+    "links": {
+      "github": "https://github.com/username/etl-pipeline"
+    },
+    "theme_color": "#39ff14",
+    "video_preview": "/videos/etl-pipeline-preview.webm"
+  },
+  {
+    "id": "churn-prediction-model",
+    "title": "Customer Churn Prediction",
+    "summary": "Developed a logistic regression model to predict customer churn with 90% precision, enabling proactive retention strategies.",
+    "thumbnail": "/images/thumbnails/PerfomanceOverview.png",
+    "tags": ["Python", "Logistic Regression", "Pandas", "Scikit-learn"],
+    "category": [
+      "Machine Learning",
+      "Predictive Analytics"
+    ],
+    "featured": false,
+    "grid_config": "col-span-1 row-span-1",
+    "metrics": [
+      { "label": "Model Precision", "value": "90%" },
+      { "label": "Accuracy", "value": "87%" }
+    ],
+    "links": {
+      "github": "https://github.com/username/churn-prediction"
+    },
+    "theme_color": "#d946ef"
+  },
+  {
+    "id": "financial-reporting-automation",
+    "title": "Financial Reporting Automation",
+    "summary": "Automated monthly financial reporting using Python, Excel, and SQL, reducing report generation time from 8 hours to 30 minutes.",
+    "thumbnail": "/images/thumbnails/FinancialPrediction.png",
+    "tags": ["Python", "Excel", "SQL", "Automation", "Finance"],
+    "category": [
+      "Business Intelligence",
+      "Automation"
+    ],
+    "featured": false,
+    "grid_config": "col-span-1 row-span-1",
+    "metrics": [
+      { "label": "Time Reduction", "value": "93%" },
+      { "label": "Reports Generated", "value": "12/mo" }
+    ],
+    "links": {
+      "github": "https://github.com/username/financial-reporting"
+    },
+    "theme_color": "#00fefc"
+  }
+]
