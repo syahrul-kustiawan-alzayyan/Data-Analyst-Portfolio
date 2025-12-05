@@ -55,17 +55,19 @@ const ProjectsClient = ({ allProjects, allCategories }: ProjectsClientProps) => 
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold font-mono text-black mb-4">
-            Project Portfolio
-          </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <div className="inline-block mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold font-mono text-white">
+              Project Portfolio
+            </h1>
+          </div>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             A collection of data analysis projects showcasing technical expertise and business impact
           </p>
         </motion.div>
 
         {/* Search and Filter Section */}
         <motion.div
-          className="mb-12 p-6 bg-gray-100 rounded-xl border border-gray-300"
+          className="mb-12 p-6 bg-gray-900/80 backdrop-blur-sm rounded-xl border border-gray-700"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -76,11 +78,11 @@ const ProjectsClient = ({ allProjects, allCategories }: ProjectsClientProps) => 
               <input
                 type="text"
                 placeholder="Search projects..."
-                className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black/50 focus:border-transparent"
+                className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
-              <div className="absolute right-3 top-1/2 transform -translate-y-1/2 i-lucide-search text-gray-500" />
+              <div className="absolute right-3 top-1/2 transform -translate-y-1/2 i-lucide-search text-gray-400" />
             </div>
 
             {/* Category Filter */}
@@ -88,8 +90,8 @@ const ProjectsClient = ({ allProjects, allCategories }: ProjectsClientProps) => 
               <button
                 className={`px-4 py-2 rounded-lg transition-all ${
                   selectedCategory === 'All'
-                    ? 'bg-black text-white font-mono'
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                    ? 'bg-white text-black font-mono'
+                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                 }`}
                 onClick={() => setSelectedCategory('All')}
               >
@@ -100,8 +102,8 @@ const ProjectsClient = ({ allProjects, allCategories }: ProjectsClientProps) => 
                   key={category}
                   className={`px-4 py-2 rounded-lg transition-all ${
                     selectedCategory === category
-                      ? 'bg-gray-800 text-white font-mono'
-                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                      ? 'bg-white text-black font-mono'
+                      : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                   }`}
                   onClick={() => setSelectedCategory(category)}
                 >
@@ -114,7 +116,7 @@ const ProjectsClient = ({ allProjects, allCategories }: ProjectsClientProps) => 
 
         {/* Results Count */}
         <motion.div
-          className="mb-8 text-gray-600 font-mono"
+          className="mb-8 text-gray-400 font-mono"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
@@ -125,6 +127,7 @@ const ProjectsClient = ({ allProjects, allCategories }: ProjectsClientProps) => 
         {/* Projects Grid */}
         {projects.length > 0 ? (
           <motion.div
+            className="bg-transparent"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
@@ -133,13 +136,13 @@ const ProjectsClient = ({ allProjects, allCategories }: ProjectsClientProps) => 
           </motion.div>
         ) : (
           <motion.div
-            className="text-center py-20"
+            className="text-center py-20 bg-transparent"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
           >
-            <div className="i-lucide-folder-open text-6xl text-gray-400 mx-auto mb-6" />
-            <h3 className="text-2xl font-mono text-gray-600 mb-2">No projects found</h3>
+            <div className="i-lucide-folder-open text-6xl text-gray-500 mx-auto mb-6" />
+            <h3 className="text-2xl font-mono text-gray-400 mb-2">No projects found</h3>
             <p className="text-gray-500">Try adjusting your search or filter criteria</p>
           </motion.div>
         )}

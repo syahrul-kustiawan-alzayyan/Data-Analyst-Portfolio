@@ -1,15 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;  /* White background */
-  --foreground: #000000;  /* Black text */
-  --primary: #000000;     /* Black */
-  --secondary: #444444;   /* Dark gray */
-  --accent: #888888;      /* Medium gray */
-  --charcoal-900: #000000; /* Pure black */
-  --charcoal-950: #111111; /* Near black */
+  --background: #000000;  /* Pure black background */
+  --foreground: #f0f0f0;  /* Light gray text for high contrast */
+  --primary: #ffffff;     /* White for primary elements */
+  --secondary: #cccccc;   /* Light gray for secondary text */
+  --accent: #e0e0e0;      /* Slightly darker white for accents */
+  --charcoal-900: #f0f0f0; /* Light gray */
+  --charcoal-950: #ffffff; /* Pure white */
   --glow-primary: none;   /* No glow effect in black and white */
   --glow-secondary: none; /* No glow effect in black and white */
+  --card-bg: #111111;     /* Near black card backgrounds */
+  --card-hover: #1a1a1a;  /* Slightly brighter on hover */
+  --border: #333333;      /* Dark gray borders */
+  --hover-border: #444444; /* Medium-dark gray on hover */
+  --section-bg: #000000;  /* Pure black for sections */
+  --section-alt-bg: #0a0a0a; /* Very dark gray for alternate sections */
+  --shadow: rgba(255, 255, 255, 0.08); /* Subtle shadow color */
 }
 
 @theme inline {
@@ -17,6 +24,13 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+  --color-card-bg: var(--card-bg);
+  --color-section-bg: var(--section-bg);
+  --color-section-alt-bg: var(--section-alt-bg);
+  --color-card-hover: var(--card-hover);
+  --color-shadow: var(--shadow);
   --font-sans: var(--font-inter);
   --font-mono: var(--font-jetbrains-mono);
 }
@@ -29,8 +43,8 @@ body {
   overflow-x: hidden;
 }
 
-/* Add subtle texture background */
-body::before {
+/* Remove the subtle texture background */
+/* body::before {
   content: '';
   position: fixed;
   top: 0;
@@ -38,30 +52,53 @@ body::before {
   width: 100%;
   height: 100%;
   background:
-    radial-gradient(circle at 10% 15%, rgba(0, 0, 0, 0.02) 0%, transparent 20%),
-    radial-gradient(circle at 90% 85%, rgba(0, 0, 0, 0.01) 0%, transparent 20%),
-    radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.01) 0%, transparent 30%);
+    radial-gradient(circle at 10% 15%, rgba(0, 0, 0, 0.005) 0%, transparent 15%),
+    radial-gradient(circle at 90% 85%, rgba(0, 0, 0, 0.003) 0%, transparent 15%),
+    radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.002) 0%, transparent 20%);
   pointer-events: none;
-  z-index: -1;
-}
+  z-index: -10;
+} */
 
-/* Scrollbar styling */
+/* Scrollbar styling for better contrast */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f0f0f0;
+  background: var(--section-alt-bg);
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--primary);
-  border-radius: 4px;
+  background: var(--secondary);
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--secondary);
+  background: var(--primary);
+}
+
+/* High contrast button styles */
+.btn-primary {
+  @apply bg-black text-white border border-transparent hover:bg-gray-800 hover:border-gray-700 transition-all duration-300 shadow-sm hover:shadow-md;
+}
+
+.btn-secondary {
+  @apply bg-white text-black border border-gray-300 hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 shadow-sm hover:shadow-md;
+}
+
+.btn-outline {
+  @apply bg-transparent text-black border border-gray-300 hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 shadow-sm hover:shadow-md;
+}
+
+/* Card styles with high contrast */
+.card {
+  @apply bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300;
+}
+
+.card-highlight {
+  @apply bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300;
 }
 
 /* Bento grid layout styles */
@@ -111,4 +148,26 @@ body::before {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
   100% { transform: translateY(0px); }
+}
+
+/* High contrast text utilities */
+.text-contrast-primary {
+  color: var(--primary);
+}
+
+.text-contrast-secondary {
+  color: var(--secondary);
+}
+
+.text-contrast-accent {
+  color: var(--accent);
+}
+
+/* Border utilities for high contrast */
+.border-contrast {
+  border-color: var(--border);
+}
+
+.border-contrast-hover:hover {
+  border-color: var(--hover-border);
 }

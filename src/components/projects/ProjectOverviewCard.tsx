@@ -50,21 +50,15 @@ const ProjectOverviewCard = ({ project, index = 0 }: ProjectOverviewCardProps) =
 
   return (
     <motion.div
-      className="relative rounded-lg border bg-white overflow-hidden group border-gray-300 border-opacity-30 h-full hover:shadow-md transition-all duration-300"
-      style={{
-        borderColor: '#000000',
-        opacity: 1,
-      }}
+      className="relative rounded-2xl border bg-gray-900 overflow-hidden group border-gray-700 h-full hover:shadow-xl transition-all duration-500 flex flex-col"
       variants={cardVariants}
       whileHover="hover"
       initial="hidden"
       animate="visible"
       whileTap={{ scale: 0.98 }}
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/10 z-10" />
-
       {/* Thumbnail with optional video preview */}
-      <div className="relative w-full overflow-hidden" style={{ height: '120px' }}>
+      <div className="relative w-full overflow-hidden" style={{ height: '160px' }}>
         {video_preview ? (
           <div className="relative w-full h-full">
             <video
@@ -73,7 +67,7 @@ const ProjectOverviewCard = ({ project, index = 0 }: ProjectOverviewCardProps) =
               loop
               muted
               playsInline
-              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 brightness-90 group-hover:brightness-100"
             />
           </div>
         ) : (
@@ -83,57 +77,48 @@ const ProjectOverviewCard = ({ project, index = 0 }: ProjectOverviewCardProps) =
               alt={title}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 brightness-90 group-hover:brightness-100"
             />
           </div>
         )}
+        <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       </div>
 
-      <div className="p-4 z-20 relative">
-        <h3 className="text-sm font-bold font-mono text-gray-900 mb-2 line-clamp-1 group-hover:text-black transition-colors duration-300">
+      <div className="p-5 z-20 relative flex flex-col flex-grow">
+        <h3 className="text-base font-bold font-mono text-white mb-2 line-clamp-1 group-hover:text-gray-200 transition-colors duration-300">
           {title}
         </h3>
 
-        <p className="text-xs text-gray-700 mb-3 line-clamp-2">
+        <p className="text-sm text-gray-400 mb-4 line-clamp-3 flex-grow">
           {summary}
         </p>
 
-        <div className="flex flex-wrap gap-1 mb-3">
+        <div className="flex flex-wrap gap-2 mb-4">
           {tags.slice(0, 3).map((tag, idx) => (
             <span
               key={idx}
-              className="text-xs px-2 py-0.5 rounded-full bg-gray-200 text-gray-800 border border-gray-400 font-mono"
-              style={{
-                borderColor: '#000000' + '40',
-                color: '#000000',
-                backgroundColor: '#000000' + '10'
-              }}
+              className="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300 border border-gray-600 font-mono"
             >
               {tag}
             </span>
           ))}
           {tags.length > 3 && (
             <span
-              className="text-xs px-2 py-0.5 rounded-full bg-gray-200 text-gray-800 border border-gray-400 font-mono"
-              style={{
-                borderColor: '#000000' + '40',
-                color: '#000000',
-                backgroundColor: '#000000' + '10'
-              }}
+              className="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300 border border-gray-600 font-mono"
             >
               +{tags.length - 3}
             </span>
           )}
         </div>
 
-        <div className="flex gap-2 pt-2 border-t border-gray-300/50">
+        <div className="flex gap-3 pt-3 border-t border-gray-800 mt-auto">
           {links.github && (
             <Link
               href={links.github}
               target="_blank"
-              className="text-xs flex items-center gap-1 text-gray-700 hover:text-gray-900 transition-colors duration-300"
+              className="text-xs flex items-center gap-1 text-gray-400 hover:text-white transition-colors duration-300 group/link"
             >
-              <div className="i-lucide-github text-sm" /> GitHub
+              <div className="i-lucide-github text-sm group-hover/link:text-white transition-colors" /> GitHub
             </Link>
           )}
 
@@ -141,9 +126,9 @@ const ProjectOverviewCard = ({ project, index = 0 }: ProjectOverviewCardProps) =
             <Link
               href={links.demo}
               target="_blank"
-              className="text-xs flex items-center gap-1 text-gray-700 hover:text-gray-900 transition-colors duration-300"
+              className="text-xs flex items-center gap-1 text-gray-400 hover:text-white transition-colors duration-300 group/link"
             >
-              <div className="i-lucide-external-link text-sm" /> Demo
+              <div className="i-lucide-external-link text-sm group-hover/link:text-white transition-colors" /> Demo
             </Link>
           )}
         </div>

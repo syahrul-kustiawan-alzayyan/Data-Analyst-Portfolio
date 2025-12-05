@@ -19,19 +19,21 @@ const SkillsContent = () => {
   const [activeTab, setActiveTab] = useState('radar');
 
   return (
-    <div className="min-h-screen w-full py-20">
+    <div className="min-h-screen w-full py-20 bg-black">
       <div className="container mx-auto px-4">
         {/* Page Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-20"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold font-mono text-gray-800 mb-4">
-            Skills & Expertise
-          </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <div className="inline-block mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold font-mono text-white">
+              Skills & Expertise
+            </h1>
+          </div>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             An overview of my technical capabilities and professional competencies
           </p>
         </motion.div>
@@ -42,25 +44,25 @@ const SkillsContent = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="mb-16"
+          className="mb-20"
         >
           <div className="flex justify-center mb-8">
-            <div className="inline-flex p-1 bg-gray-100 rounded-xl border border-gray-300">
+            <div className="inline-flex p-1 bg-gray-800 rounded-full border border-gray-600">
               <button
-                className={`px-6 py-3 rounded-lg transition-all ${
+                className={`px-6 py-3 rounded-full transition-all ${
                   activeTab === 'radar'
-                    ? 'bg-gradient-to-r from-black to-gray-800 text-white font-mono shadow-lg shadow-gray-300/20'
-                    : 'text-gray-500 hover:text-black'
+                    ? 'bg-white text-black font-mono shadow-lg shadow-white/20'
+                    : 'text-gray-400 hover:text-white'
                 }`}
                 onClick={() => setActiveTab('radar')}
               >
                 Radar Chart
               </button>
               <button
-                className={`px-6 py-3 rounded-lg transition-all ${
+                className={`px-6 py-3 rounded-full transition-all ${
                   activeTab === 'bar'
-                    ? 'bg-gradient-to-r from-gray-600 to-black text-white font-mono shadow-lg shadow-gray-300/20'
-                    : 'text-gray-500 hover:text-black'
+                    ? 'bg-white text-black font-mono shadow-lg shadow-white/20'
+                    : 'text-gray-400 hover:text-white'
                 }`}
                 onClick={() => setActiveTab('bar')}
               >
@@ -69,44 +71,44 @@ const SkillsContent = () => {
             </div>
           </div>
 
-          <div className="h-96 bg-gray-100 rounded-xl p-4 border border-gray-300">
+          <div className="h-96 bg-gray-900/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 shadow-sm">
             {activeTab === 'radar' ? (
               <ResponsiveContainer width="100%" height="100%">
                 <RadarChart cx="50%" cy="50%" outerRadius="70%" data={skillsData}>
-                  <PolarGrid stroke="rgba(0, 0, 0, 0.3)" radialLines={true} />
+                  <PolarGrid stroke="rgba(255, 255, 255, 0.1)" radialLines={true} />
                   <PolarAngleAxis
                     dataKey="name"
-                    tick={{ fill: '#000000', fontSize: 13, fontWeight: 500 }}
+                    tick={{ fill: '#D1D5DB', fontSize: 13, fontWeight: 500 }}
                     tickLine={false}
                     axisLine={false}
                   />
                   <PolarRadiusAxis
                     angle={90}
                     domain={[0, 100]}
-                    tick={{ fill: '#666666', fontSize: 11 }}
+                    tick={{ fill: '#9CA3AF', fontSize: 11 }}
                     orientation="middle"
-                    stroke="rgba(0, 0, 0, 0.3)"
+                    stroke="rgba(255, 255, 255, 0.1)"
                     tickCount={6}
                   />
                   <Radar
                     name="Skill Level"
                     dataKey="level"
-                    stroke="#000000"
-                    fill="#000000"
-                    fillOpacity={0.2}
-                    strokeWidth={3}
+                    stroke="#FFFFFF"
+                    fill="#FFFFFF"
+                    fillOpacity={0.1}
+                    strokeWidth={2}
                     animationDuration={1500}
                   />
                   <Tooltip
                     contentStyle={{
-                      backgroundColor: '#ffffff',
-                      borderColor: '#000000',
+                      backgroundColor: '#1F2937',
+                      borderColor: '#374151',
                       borderRadius: '0.5rem',
-                      color: 'black',
-                      boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.1)'
+                      color: '#F9FAFB',
+                      boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.05)'
                     }}
-                    itemStyle={{ color: '#000000', fontWeight: 'bold' }}
-                    labelStyle={{ color: '#888888', marginBottom: '5px' }}
+                    itemStyle={{ color: '#F9FAFB', fontWeight: 'bold' }}
+                    labelStyle={{ color: '#9CA3AF', marginBottom: '5px' }}
                   />
                 </RadarChart>
               </ResponsiveContainer>
@@ -121,10 +123,10 @@ const SkillsContent = () => {
                     bottom: 60,
                   }}
                 >
-                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(0, 0, 0, 0.1)" />
+                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(255, 255, 255, 0.05)" />
                   <XAxis
                     dataKey="name"
-                    tick={{ fill: '#000000', fontSize: 12, fontWeight: 500 }}
+                    tick={{ fill: '#D1D5DB', fontSize: 12, fontWeight: 500 }}
                     angle={-45}
                     textAnchor="end"
                     height={70}
@@ -132,20 +134,20 @@ const SkillsContent = () => {
                   />
                   <YAxis
                     domain={[0, 100]}
-                    tick={{ fill: '#666666', fontSize: 11 }}
+                    tick={{ fill: '#9CA3AF', fontSize: 11 }}
                     tickFormatter={(value) => `${value}%`}
                   />
                   <Tooltip
                     contentStyle={{
-                      backgroundColor: '#ffffff',
-                      borderColor: '#000000',
+                      backgroundColor: '#1F2937',
+                      borderColor: '#374151',
                       borderRadius: '0.5rem',
-                      color: 'black',
-                      boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.1)'
+                      color: '#F9FAFB',
+                      boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.05)'
                     }}
                     formatter={(value) => [`${value}%`, 'Level']}
-                    labelStyle={{ color: '#888888', marginBottom: '5px' }}
-                    itemStyle={{ color: '#000000', fontWeight: 'bold' }}
+                    labelStyle={{ color: '#9CA3AF', marginBottom: '5px' }}
+                    itemStyle={{ color: '#F9FAFB', fontWeight: 'bold' }}
                   />
                   <Bar
                     dataKey="level"
@@ -155,8 +157,8 @@ const SkillsContent = () => {
                   />
                   <defs>
                     <linearGradient id="colorGradient" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#000000" stopOpacity={0.8}/>
-                      <stop offset="95%" stopColor="#888888" stopOpacity={0.8}/>
+                      <stop offset="5%" stopColor="#FFFFFF" stopOpacity={0.8}/>
+                      <stop offset="95%" stopColor="#D1D5DB" stopOpacity={0.8}/>
                     </linearGradient>
                   </defs>
                 </BarChart>
@@ -167,40 +169,63 @@ const SkillsContent = () => {
 
         {/* Skills Breakdown */}
         <motion.div
-          className="mb-16"
+          className="mb-20"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
         >
-          <h2 className="text-2xl font-bold font-mono text-center text-black mb-12">Technical Skills Breakdown</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="inline-block mb-12">
+            <h2 className="text-2xl font-bold font-mono text-white">
+              Technical Skills Breakdown
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { name: 'Data Processing', items: ['Python', 'Pandas', 'NumPy', 'SQL'], icon: 'database' },
+              { name: 'Data Processing', items: ['Python', 'Pandas', 'NumPy', 'SQL'], icon: 'code' },
               { name: 'Visualization', items: ['Tableau', 'Matplotlib', 'PowerBI'], icon: 'bar-chart-4' },
-              { name: 'Machine Learning', items: ['Scikit-learn', 'TensorFlow', 'Keras', 'XGBoost'], icon: 'brain' },
-              { name: 'Database Management', items: ['MySQL', 'MongoDB'], icon: 'server' },
-              { name: 'Statistical Analysis', items: ['Excel', 'Spreadsheet'], icon: 'trending-up' },
-              { name: 'Communication', items: ['Presentations', 'Reporting', 'Documentation'], icon: 'message-circle' },
+              { name: 'Machine Learning', items: ['Scikit-learn', 'TensorFlow', 'Keras', 'XGBoost'], icon: 'bot' },
+              { name: 'Database Management', items: ['MySQL', 'MongoDB'], icon: 'hard-drive' },
+              { name: 'Statistical Analysis', items: ['Excel', 'Spreadsheet'], icon: 'calculator' },
+              { name: 'Communication', items: ['Presentations', 'Reporting', 'Documentation'], icon: 'presentation' },
             ].map((skillGroup, index) => (
               <motion.div
                 key={skillGroup.name}
-                className="p-6 bg-gray-100 rounded-xl border border-gray-300 hover:border-black/30 transition-all duration-300 hover:shadow-lg hover:shadow-black/10"
-                whileHover={{ y: -8 }}
+                className="p-8 bg-gray-900/80 backdrop-blur-sm rounded-2xl border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:shadow-xl group"
+                whileHover={{ y: -10 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 * index }}
               >
-                <div className="flex items-center mb-4">
-                  <div className="text-black mr-3">
-                    <div className={`i-lucide-${skillGroup.icon} text-2xl`} />
+                <div className="flex items-center mb-6">
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-gray-800 to-gray-700 flex items-center justify-center mr-5 group-hover:from-gray-700 group-hover:to-gray-600 transition-colors">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      {skillGroup.icon === 'code' && (
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                      )}
+                      {skillGroup.icon === 'bar-chart-4' && (
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                      )}
+                      {skillGroup.icon === 'bot' && (
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                      )}
+                      {skillGroup.icon === 'hard-drive' && (
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                      )}
+                      {skillGroup.icon === 'calculator' && (
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                      )}
+                      {skillGroup.icon === 'presentation' && (
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                      )}
+                    </svg>
                   </div>
-                  <h3 className="font-bold text-lg text-black">{skillGroup.name}</h3>
+                  <h3 className="font-bold text-xl text-white">{skillGroup.name}</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {skillGroup.items.map((item, idx) => (
                     <span
                       key={idx}
-                      className="text-xs px-3 py-1.5 rounded-lg bg-gray-200 text-gray-800 border border-gray-400/20 transition-colors hover:border-gray-400/50"
+                      className="text-xs px-3 py-1.5 rounded-full bg-gray-800 text-gray-300 border border-gray-600 transition-colors hover:bg-gray-700"
                     >
                       {item}
                     </span>

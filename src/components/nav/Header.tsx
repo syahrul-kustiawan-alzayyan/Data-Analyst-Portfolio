@@ -31,22 +31,31 @@ const Header = () => {
     <>
       {/* Desktop Header */}
       <motion.header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
           scrolled
-            ? 'bg-gray-100/80 backdrop-blur-md border-b border-black/10 py-2'
-            : 'bg-transparent py-4'
+            ? 'bg-black/90 backdrop-blur-md border-b border-gray-700 py-3 shadow-md'
+            : 'bg-black/80 backdrop-blur-md py-5 border-b border-transparent'
         }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="container mx-auto px-4 flex justify-between items-center">
+        <div className="container mx-auto px-6 flex justify-between items-center">
           <motion.div
-            className="text-2xl font-bold font-mono"
+            className="flex items-center space-x-2"
             whileHover={{ scale: 1.05 }}
           >
-            <Link href="/" className="text-black">
-              DA
+            <Link href="/" className="flex items-center">
+              <img
+                src="/images/portfolio.png"
+                alt="Portfolio Logo"
+                width={32}
+                height={32}
+                className="rounded-md"
+              />
+              <span className="ml-2 text-lg font-bold font-mono hidden sm:block text-white">
+                Data Analyst
+              </span>
             </Link>
           </motion.div>
 
@@ -57,19 +66,20 @@ const Header = () => {
               return (
                 <Link key={item.name} href={item.href}>
                   <motion.div
-                    className={`px-4 py-2 rounded-lg transition-all ${
+                    className={`px-5 py-3 rounded-lg transition-all duration-300 relative ${
                       isActive
-                        ? 'text-black bg-gray-200'
-                        : 'text-gray-700 hover:text-black'
+                        ? 'text-white font-medium'
+                        : 'text-gray-300 hover:text-white'
                     }`}
                     whileHover={{ scale: 1.05 }}
-                    style={{
-                      boxShadow: isActive
-                        ? '0 0 10px rgba(0, 0, 0, 0.2)'
-                        : 'none'
-                    }}
                   >
                     <span className="font-mono">{item.name}</span>
+                    {isActive && (
+                      <motion.div
+                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-white to-transparent"
+                        layoutId="navIndicator"
+                      />
+                    )}
                   </motion.div>
                 </Link>
               );
@@ -77,8 +87,8 @@ const Header = () => {
           </nav>
 
           {/* Mobile menu button */}
-          <button 
-            className="md:hidden text-gray-300"
+          <button
+            className="md:hidden text-gray-300 p-2 rounded-lg hover:bg-gray-700 transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <div className="i-lucide-menu text-2xl" />
@@ -90,20 +100,25 @@ const Header = () => {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            className="fixed top-0 left-0 right-0 bottom-0 z-30 bg-white/95 backdrop-blur-md flex flex-col items-center justify-center md:hidden"
+            className="fixed inset-0 z-30 bg-black flex flex-col items-center justify-center md:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <button
-              className="absolute top-6 right-6 text-gray-700"
+              className="absolute top-6 right-6 text-gray-200 p-2 rounded-full hover:bg-gray-800 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               <div className="i-lucide-x text-2xl" />
             </button>
 
-            <nav className="flex flex-col items-center space-y-8">
-              {navItems.map((item) => {
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="flex flex-col items-center space-y-10"
+            >
+              {navItems.map((item, index) => {
                 const isActive = pathname === item.href;
                 return (
                   <Link
@@ -112,20 +127,23 @@ const Header = () => {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     <motion.div
-                      className={`text-2xl font-mono py-3 px-6 rounded-full ${
+                      className={`text-2xl font-mono py-3 px-8 rounded-full transition-all ${
                         isActive
-                          ? 'text-black bg-gray-200'
-                          : 'text-gray-700'
+                          ? 'text-white bg-gray-800 font-bold border border-gray-600'
+                          : 'text-gray-200 hover:text-white'
                       }`}
-                      whileHover={{ scale: 1.1 }}
+                      whileHover={{ scale: 1.1, x: 5 }}
                       whileTap={{ scale: 0.95 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.3 + index * 0.1 }}
                     >
                       {item.name}
                     </motion.div>
                   </Link>
                 );
               })}
-            </nav>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
