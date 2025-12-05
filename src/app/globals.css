@@ -59,6 +59,29 @@ body {
   z-index: -10;
 } */
 
+/* Ensure all components have transparent or dark backgrounds by default */
+.bg-white {
+  background-color: #111111 !important;
+}
+
+.bg-gray-50 {
+  background-color: #0a0a0a !important;
+}
+
+.bg-gray-100 {
+  background-color: #1a1a1a !important;
+}
+
+/* Override any background colors that might cover the animated background */
+main, section, article, div {
+  background-color: transparent !important;
+}
+
+/* Prevent any default white backgrounds from overriding the animated background */
+.backdrop-blur-sm, .backdrop-blur-md, .backdrop-blur-lg {
+  background-color: transparent !important;
+}
+
 /* Scrollbar styling for better contrast */
 ::-webkit-scrollbar {
   width: 10px;

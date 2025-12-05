@@ -12,10 +12,10 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="relative min-h-screen overflow-x-hidden bg-black">
+    <div className="relative min-h-screen overflow-x-hidden">
       <AnimatedBackground />
       <Header />
-      <main className="pt-16 pb-24 relative z-10 min-h-screen bg-black">
+      <main className="pt-16 pb-24 relative z-10 min-h-screen bg-transparent">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

@@ -32,7 +32,7 @@ const AnimatedBackground = () => {
         size: Math.random() * 1.5 + 0.5, // Slightly smaller for subtle effect
         speedX: (Math.random() - 0.5) * 0.4, // Slower for better visibility
         speedY: (Math.random() - 0.5) * 0.4,
-        color: `rgba(200, 200, 200, ${Math.random() * 0.3 + 0.1})`, // Darker color range
+        color: `rgba(${Math.floor(220 + Math.random() * 35)}, ${Math.floor(220 + Math.random() * 35)}, ${Math.floor(220 + Math.random() * 35)}, ${Math.random() * 0.2 + 0.1})`, // Lighter color range for dark theme
         originalX: Math.random() * canvas.width,
         originalY: Math.random() * canvas.height,
         oscillation: {
@@ -47,16 +47,16 @@ const AnimatedBackground = () => {
     let animationFrameId: number;
 
     const render = () => {
-      // Clear canvas with black background
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+      // Clear canvas with very dark background
+      ctx.fillStyle = 'rgba(10, 10, 10, 0.1)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       // Draw subtle grid pattern
-      ctx.strokeStyle = 'rgba(50, 50, 50, 0.1)';
-      ctx.lineWidth = 0.3;
+      ctx.strokeStyle = 'rgba(100, 100, 100, 0.03)';
+      ctx.lineWidth = 0.2;
 
       // Vertical lines
-      for (let x = 0; x < canvas.width; x += 70) {
+      for (let x = 0; x < canvas.width; x += 60) {
         ctx.beginPath();
         ctx.moveTo(x, 0);
         ctx.lineTo(x, canvas.height);
@@ -64,7 +64,7 @@ const AnimatedBackground = () => {
       }
 
       // Horizontal lines
-      for (let y = 0; y < canvas.height; y += 70) {
+      for (let y = 0; y < canvas.height; y += 60) {
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
@@ -82,8 +82,8 @@ const AnimatedBackground = () => {
         const waveY = Math.cos(particle.oscillation.y) * particle.oscillation.amplitude;
 
         // Update position with wave movement
-        particle.x = particle.originalX + waveX + Math.sin(Date.now() * 0.001 + particle.originalX) * 10;
-        particle.y = particle.originalY + waveY + Math.cos(Date.now() * 0.001 + particle.originalY) * 10;
+        particle.x = particle.originalX + waveX + Math.sin(Date.now() * 0.001 + particle.originalX) * 8;
+        particle.y = particle.originalY + waveY + Math.cos(Date.now() * 0.001 + particle.originalY) * 8;
 
         // Boundary checks with wrapping
         if (particle.x > canvas.width) particle.x = 0;
@@ -105,11 +105,11 @@ const AnimatedBackground = () => {
           const dy = particle.y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 100) { // Connection distance
-            const connectionAlpha = 0.1 * (1 - distance / 100); // Reduced opacity for subtlety
+          if (distance < 80) { // Connection distance - reduced for subtler connections
+            const connectionAlpha = 0.07 * (1 - distance / 80); // Further reduced opacity
             ctx.beginPath();
             ctx.strokeStyle = `rgba(200, 200, 200, ${connectionAlpha})`;
-            ctx.lineWidth = 0.5;
+            ctx.lineWidth = 0.4; // Slightly thinner lines
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
             ctx.stroke();
@@ -137,5 +137,4 @@ const AnimatedBackground = () => {
     />
   );
 };
-
 export default AnimatedBackground;

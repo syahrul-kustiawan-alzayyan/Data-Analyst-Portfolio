@@ -47,12 +47,12 @@ const SkillsContent = () => {
           className="mb-20"
         >
           <div className="flex justify-center mb-8">
-            <div className="inline-flex p-1 bg-gray-800 rounded-full border border-gray-600">
+            <div className="inline-flex p-1 bg-gray-800/50 backdrop-blur-sm rounded-full border border-gray-600">
               <button
                 className={`px-6 py-3 rounded-full transition-all ${
                   activeTab === 'radar'
-                    ? 'bg-white text-black font-mono shadow-lg shadow-white/20'
-                    : 'text-gray-400 hover:text-white'
+                    ? 'bg-black text-white font-mono shadow-lg shadow-white/30'
+                    : 'bg-white/20 text-white hover:bg-white/30'
                 }`}
                 onClick={() => setActiveTab('radar')}
               >
@@ -61,8 +61,8 @@ const SkillsContent = () => {
               <button
                 className={`px-6 py-3 rounded-full transition-all ${
                   activeTab === 'bar'
-                    ? 'bg-white text-black font-mono shadow-lg shadow-white/20'
-                    : 'text-gray-400 hover:text-white'
+                    ? 'bg-black text-white font-mono shadow-lg shadow-white/30'
+                    : 'bg-white/20 text-white hover:bg-white/30'
                 }`}
                 onClick={() => setActiveTab('bar')}
               >

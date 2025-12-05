@@ -63,7 +63,7 @@ const ProjectCard = ({ project, index = 0 }: ProjectCardProps) => {
       animate="visible"
       whileTap={{ scale: 0.98 }}
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-white/10 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/10 z-10" />
 
       {/* Thumbnail with optional video preview - responsive container with aspect ratio */}
       <div className="relative w-full overflow-hidden" style={{ aspectRatio: '16/9' }}>

@@ -67,7 +67,7 @@ const ProjectsClient = ({ allProjects, allCategories }: ProjectsClientProps) => 
 
         {/* Search and Filter Section */}
         <motion.div
-          className="mb-12 p-6 bg-gray-900/80 backdrop-blur-sm rounded-xl border border-gray-700"
+          className="mb-12 p-6 bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-600/50"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -78,11 +78,11 @@ const ProjectsClient = ({ allProjects, allCategories }: ProjectsClientProps) => 
               <input
                 type="text"
                 placeholder="Search projects..."
-                className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent"
+                className="w-full px-4 py-3 bg-gray-700/60 backdrop-blur-sm border border-gray-500/60 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
-              <div className="absolute right-3 top-1/2 transform -translate-y-1/2 i-lucide-search text-gray-400" />
+              <div className="absolute right-3 top-1/2 transform -translate-y-1/2 i-lucide-search text-gray-300" />
             </div>
 
             {/* Category Filter */}
@@ -90,8 +90,8 @@ const ProjectsClient = ({ allProjects, allCategories }: ProjectsClientProps) => 
               <button
                 className={`px-4 py-2 rounded-lg transition-all ${
                   selectedCategory === 'All'
-                    ? 'bg-white text-black font-mono'
-                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                    ? 'bg-black text-white font-mono shadow-lg shadow-white/30'
+                    : 'bg-white/20 text-white hover:bg-white/30'
                 }`}
                 onClick={() => setSelectedCategory('All')}
               >
@@ -102,8 +102,8 @@ const ProjectsClient = ({ allProjects, allCategories }: ProjectsClientProps) => 
                   key={category}
                   className={`px-4 py-2 rounded-lg transition-all ${
                     selectedCategory === category
-                      ? 'bg-white text-black font-mono'
-                      : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                      ? 'bg-black text-white font-mono shadow-lg shadow-white/30'
+                      : 'bg-white/20 text-white hover:bg-white/30'
                   }`}
                   onClick={() => setSelectedCategory(category)}
                 >
@@ -116,7 +116,7 @@ const ProjectsClient = ({ allProjects, allCategories }: ProjectsClientProps) => 
 
         {/* Results Count */}
         <motion.div
-          className="mb-8 text-gray-400 font-mono"
+          className="mb-8 text-white font-mono"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
@@ -141,9 +141,9 @@ const ProjectsClient = ({ allProjects, allCategories }: ProjectsClientProps) => 
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
           >
-            <div className="i-lucide-folder-open text-6xl text-gray-500 mx-auto mb-6" />
-            <h3 className="text-2xl font-mono text-gray-400 mb-2">No projects found</h3>
-            <p className="text-gray-500">Try adjusting your search or filter criteria</p>
+            <div className="i-lucide-folder-open text-6xl text-white mx-auto mb-6" />
+            <h3 className="text-2xl font-mono text-white mb-2">No projects found</h3>
+            <p className="text-gray-400">Try adjusting your search or filter criteria</p>
           </motion.div>
         )}
       </div>

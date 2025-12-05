@@ -74,7 +74,7 @@ export default function HomeContent({ featuredProjects }: HomeContentProps) {
             >
               <motion.a
                 href="#projects"
-                className="px-8 py-4 bg-white text-black font-mono rounded-full inline-block text-center hover:bg-gray-200 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="px-8 py-4 bg-black text-white font-mono rounded-full inline-block text-center border border-gray-600 hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl"
                 whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -133,7 +133,7 @@ export default function HomeContent({ featuredProjects }: HomeContentProps) {
           >
             <a
               href="/projects"
-              className="inline-flex items-center px-8 py-4 bg-white text-black font-mono rounded-full hover:bg-gray-200 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center px-8 py-4 bg-black text-white font-mono rounded-full hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl border border-gray-600"
             >
               View All Projects
               <div className="i-lucide-arrow-right ml-2 text-lg" />
@@ -211,7 +211,7 @@ export default function HomeContent({ featuredProjects }: HomeContentProps) {
           >
             <a
               href="/skills"
-              className="inline-flex items-center px-8 py-4 bg-white text-black font-mono rounded-full hover:bg-gray-200 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center px-8 py-4 bg-black text-white font-mono rounded-full hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl border border-gray-700"
             >
               View Full Skills
               <div className="i-lucide-arrow-right ml-2 text-lg" />
