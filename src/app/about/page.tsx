@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Layout from '@/components/Layout';
+import TimelineSection from '@/components/TimelineSection';
 
 const AboutPage = () => {
   return (
@@ -116,49 +117,13 @@ const AboutPage = () => {
               </h2>
             </div>
 
-            <div className="relative">
-              {/* Vertical timeline line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-gray-600 to-gray-700 top-0 bottom-0"></div>
-
-              <div className="space-y-12">
-                {[
-                  { year: 'February 2024', title: 'Introduction to Data Analyst', description: 'Started my journey in data analysis, learning fundamental concepts and tools.' },
-                  { year: 'December 2024', title: 'Training & Certification Data Analyst Specialist', description: 'Completed specialized training and obtained certification as a Data Analyst Specialist.' },
-                  { year: 'October 2025', title: 'Big Data Analyst Internship', description: 'Gained practical experience in analyzing large datasets and implementing data solutions.' },
-                ].map((event, index) => (
-                  <motion.div
-                    key={index}
-                    className={`relative flex ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center`}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.1 * index }}
-                  >
-                    {/* Left/Right card */}
-                    <div className="md:w-5/12 p-4">
-                      <div className="bg-gray-800 rounded-2xl p-6 border border-gray-600 shadow-sm hover:shadow-md transition-shadow duration-300">
-                        <div className="flex justify-between items-start">
-                          <div>
-                            <span className="text-sm text-gray-400 font-mono">{event.year}</span>
-                            <h3 className="text-xl font-bold font-mono mt-1 mb-2 text-white">{event.title}</h3>
-                            <p className="text-gray-400">{event.description}</p>
-                          </div>
-
-                          {/* Timeline dot */}
-                          <div className="hidden md:block ml-4">
-                            <div className="w-4 h-4 rounded-full bg-gradient-to-r from-white to-gray-400 border-2 border-gray-900 relative z-10"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Spacer for alignment */}
-                    <div className="hidden md:block md:w-2/12"></div>
-                    <div className="md:w-5/12"></div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
+            <TimelineSection
+              items={[
+                { year: 'February 2024', title: 'Introduction to Data Analyst', description: 'Started my journey in data analysis, learning fundamental concepts and tools.' },
+                { year: 'December 2024', title: 'Training & Certification Data Analyst Specialist', description: 'Completed specialized training and obtained certification as a Data Analyst Specialist.' },
+                { year: 'October 2025', title: 'Big Data Analyst Internship', description: 'Gained practical experience in analyzing large datasets and implementing data solutions.' },
+              ]}
+            />
           </motion.div>
 
           {/* CV Download Section */}
