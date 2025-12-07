@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Layout from '@/components/Layout';
 import TimelineSection from '@/components/TimelineSection';
+import Certifications from '@/components/Certifications';
 
 const AboutPage = () => {
   return (
@@ -27,7 +28,7 @@ const AboutPage = () => {
           </motion.div>
 
           {/* Main Content */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
             {/* Profile Image/Info */}
             <motion.div
               className="lg:col-span-1"
@@ -37,33 +38,40 @@ const AboutPage = () => {
             >
               <div className="bg-gray-900/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 shadow-sm h-full">
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-40 h-40 rounded-full bg-gradient-to-br from-gray-800 to-gray-600 mb-6 overflow-hidden border-2 border-gray-600">
-                    <div className="bg-gray-700 border-2 border-dashed rounded-full w-full h-full flex items-center justify-center">
-                      <div className="i-lucide-user text-4xl text-gray-300" />
-                    </div>
+                  <div className="w-48 h-48 rounded-full bg-gradient-to-br from-gray-800 to-gray-600 mb-6 overflow-hidden border-4 border-white/20 shadow-lg">
+                    <img
+                      src="/images/foto Profil.png"
+                      alt="Syahrul Kustiawan Al Zayyan"
+                      className="w-full h-full object-cover rounded-full"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.onerror = null;
+                        target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' fill='%23374151'/%3E%3Ccircle cx='12' cy='10' r='4' fill='none' stroke='%239CA3AF' stroke-width='2'/%3E%3Cpath d='M4 20c0-4 4-6 8-6s8 2 8 6' fill='none' stroke='%239CA3AF' stroke-width='2'/%3E%3C/svg%3E";
+                      }}
+                    />
                   </div>
-                  <h2 className="text-2xl font-bold font-mono text-white mb-2">Syahrul Kustiawan Al Zayyan</h2>
-                  <p className="text-gray-400 mb-6">Data Analyst</p>
+                  <h2 className="text-3xl font-bold font-mono text-white mb-2">Syahrul Kustiawan Al Zayyan</h2>
+                  <p className="text-xl text-gray-300 mb-6">Data Analyst</p>
 
                   <div className="w-full mb-6">
                     <div className="flex justify-between text-sm mb-1">
-                      <span className="text-gray-400">Experience Level</span>
-                      <span className="text-white font-mono">Advanced</span>
+                      <span className="text-gray-400 font-mono">Experience Level</span>
+                      <span className="text-white font-mono">Junior Data Analyst</span>
                     </div>
-                    <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
+                    <div className="h-3 bg-gray-800 rounded-full overflow-hidden mt-2">
                       <div
                         className="h-full bg-gradient-to-r from-white to-gray-400 rounded-full"
-                        style={{ width: '90%' }}
+                        style={{ width: '40%' }}
                       ></div>
                     </div>
-                    <p className="text-right text-xs text-gray-500 mt-1">90% Proficient</p>
+                    <p className="text-right text-xs text-gray-500 mt-1">40% Proficient</p>
                   </div>
 
                   <div className="flex flex-wrap gap-2 justify-center">
                     {['Python', 'SQL', 'Excel', 'Power BI', 'Tableau'].map((tech, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1.5 rounded-full bg-gray-800 text-gray-300 border border-gray-600 text-sm"
+                        className="px-4 py-2 rounded-full bg-gray-800/60 text-gray-200 border border-gray-600 text-sm font-mono hover:bg-gray-700/70 transition-all duration-300"
                       >
                         {tech}
                       </span>
@@ -81,20 +89,20 @@ const AboutPage = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <div className="bg-gray-900/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 shadow-sm h-full">
-                <h2 className="text-2xl font-bold font-mono text-white mb-6">About Me</h2>
-                <div className="prose prose-gray max-w-none">
-                  <p className="text-gray-400 mb-6 leading-relaxed">
+                <h2 className="text-3xl font-bold font-mono text-white mb-6 pb-4 border-b border-gray-700/50">About Me</h2>
+                <div className="space-y-4">
+                  <p className="text-gray-300 leading-relaxed text-lg">
                     I'm a passionate data analyst with expertise in transforming complex datasets into
                     actionable insights that drive business decisions. My experience spans across data
                     processing, statistical analysis, machine learning, and visualization.
                   </p>
-                  <p className="text-gray-400 mb-6 leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed text-lg">
                     I specialize in using various data analysis tools and programming languages to
                     extract meaningful patterns from data and present them in a clear, understandable
                     format to stakeholders. My approach is centered on clear communication and delivering
                     results that can be easily understood and acted upon.
                   </p>
-                  <p className="text-gray-400 leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed text-lg">
                     When I'm not analyzing data, you can find me exploring new datasets, learning
                     new analytical techniques, or contributing to open-source data projects.
                   </p>
@@ -125,6 +133,9 @@ const AboutPage = () => {
               ]}
             />
           </motion.div>
+
+          {/* Certifications Section */}
+          <Certifications />
 
           {/* CV Download Section */}
           <motion.div

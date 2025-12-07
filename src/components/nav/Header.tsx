@@ -47,11 +47,12 @@ const Header = () => {
           >
             <Link href="/" className="flex items-center">
               <img
-                src="/images/portfolio.png"
+                src="/images/Logo.png"
                 alt="Portfolio Logo"
                 width={32}
                 height={32}
-                className="rounded-md"
+                className="rounded-md object-contain"
+                style={{ width: '32px', height: '32px' }}
               />
               <span className="ml-2 text-lg font-bold font-mono hidden sm:block text-white">
                 Data Analyst

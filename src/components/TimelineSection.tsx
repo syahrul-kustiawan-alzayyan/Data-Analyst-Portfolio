@@ -25,7 +25,7 @@ const TimelineSection = ({ items }: TimelineSectionProps) => {
               <div className="flex items-center">
                 {/* Left card */}
                 <div className="md:w-5/12 p-4 pr-8">
-                  <div className="bg-gray-800/90 backdrop-blur-sm rounded-2xl p-6 border border-gray-600 shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="bg-gray-900/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-600 shadow-sm hover:shadow-md transition-shadow duration-300">
                     <div className="flex items-center">
                       <div className="mr-auto">
                         <span className="text-sm text-gray-400 font-mono block">{item.year}</span>
@@ -63,7 +63,7 @@ const TimelineSection = ({ items }: TimelineSectionProps) => {
 
                 {/* Right card */}
                 <div className="md:w-5/12 p-4 pl-8">
-                  <div className="bg-gray-800/90 backdrop-blur-sm rounded-2xl p-6 border border-gray-600 shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="bg-gray-900/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-600 shadow-sm hover:shadow-md transition-shadow duration-300">
                     <div className="flex items-center">
                       {/* Timeline dot */}
                       <div className="hidden md:block flex-shrink-0 z-20 mr-4">

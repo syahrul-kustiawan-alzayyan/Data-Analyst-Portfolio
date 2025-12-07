@@ -65,7 +65,7 @@ const ContactPage = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Contact Information */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -73,14 +73,14 @@ const ContactPage = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="bg-gray-900/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 shadow-sm h-full">
-                <h2 className="text-2xl font-bold font-mono text-white mb-8">
+                <h2 className="text-3xl font-bold font-mono text-white mb-8 pb-4 border-b border-gray-700/50">
                   Contact Information
                 </h2>
 
                 <div className="space-y-6">
-                  <div className="flex items-start p-4 rounded-xl hover:bg-gray-800 transition-colors border border-transparent hover:border-gray-600">
-                    <div className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mr-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <div className="flex items-start p-5 rounded-xl bg-gray-800/30 hover:bg-gray-800/50 transition-all border border-gray-700/30 hover:border-gray-600/50 group">
+                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-white to-gray-400 flex items-center justify-center mr-5 group-hover:scale-110 transition-transform">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
@@ -88,16 +88,16 @@ const ContactPage = () => {
                       <h3 className="font-mono text-sm text-gray-400 mb-1">EMAIL</h3>
                       <a
                         href="mailto:syahrulkustiawanalzayyan@gmail.com"
-                        className="text-gray-300 hover:text-white transition-colors text-lg font-medium"
+                        className="text-white hover:text-gray-300 transition-colors text-lg font-medium block"
                       >
                         syahrulkustiawanalzayyan@gmail.com
                       </a>
                     </div>
                   </div>
 
-                  <div className="flex items-start p-4 rounded-xl hover:bg-gray-800 transition-colors border border-transparent hover:border-gray-600">
-                    <div className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mr-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <div className="flex items-start p-5 rounded-xl bg-gray-800/30 hover:bg-gray-800/50 transition-all border border-gray-700/30 hover:border-gray-600/50 group">
+                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-white to-gray-400 flex items-center justify-center mr-5 group-hover:scale-110 transition-transform">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                     </div>
@@ -105,65 +105,67 @@ const ContactPage = () => {
                       <h3 className="font-mono text-sm text-gray-400 mb-1">PHONE</h3>
                       <a
                         href="tel:+6281224912822"
-                        className="text-gray-300 hover:text-white transition-colors text-lg font-medium"
+                        className="text-white hover:text-gray-300 transition-colors text-lg font-medium block"
                       >
                         +62 812-2491-2822
                       </a>
                     </div>
                   </div>
 
-                  <div className="flex items-start p-4 rounded-xl hover:bg-gray-800 transition-colors border border-transparent hover:border-gray-600">
-                    <div className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mr-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <div className="flex items-start p-5 rounded-xl bg-gray-800/30 hover:bg-gray-800/50 transition-all border border-gray-700/30 hover:border-gray-600/50 group">
+                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-white to-gray-400 flex items-center justify-center mr-5 group-hover:scale-110 transition-transform">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
                     </div>
                     <div>
                       <h3 className="font-mono text-sm text-gray-400 mb-1">LOCATION</h3>
-                      <p className="text-gray-300 text-lg font-medium">Garut, Jawa Barat</p>
+                      <p className="text-white text-lg font-medium">Garut, Jawa Barat</p>
                     </div>
                   </div>
 
-                  <div className="flex items-start p-4 rounded-xl hover:bg-gray-800 transition-colors border border-transparent hover:border-gray-600">
-                    <div className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center mr-4">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <div className="flex items-start p-5 rounded-xl bg-gray-800/30 hover:bg-gray-800/50 transition-all border border-gray-700/30 hover:border-gray-600/50 group">
+                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-white to-gray-400 flex items-center justify-center mr-5 group-hover:scale-110 transition-transform">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                       </svg>
                     </div>
                     <div>
                       <h3 className="font-mono text-sm text-gray-400 mb-4">SOCIAL</h3>
-                      <div className="flex space-x-6">
+                      <div className="flex space-x-8">
                         <a
                           href="https://www.linkedin.com/in/syahrul-al-zayyan"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-gray-400 hover:text-gray-300 transition-colors flex flex-col items-center"
+                          className="text-gray-400 hover:text-gray-300 transition-colors flex flex-col items-center group/social"
                           aria-label="LinkedIn"
                         >
-                          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mb-1">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                          </svg>
-                          <span className="text-xs font-mono mt-1 text-gray-400">LinkedIn</span>
+                          <div className="w-12 h-12 rounded-full bg-gray-800/50 flex items-center justify-center mb-2 group-hover/social:bg-gradient-to-br group-hover/social:from-white group-hover/social:to-gray-400 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover/social:text-black">
+                              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                          </div>
+                          <span className="text-xs font-mono mt-1 text-gray-400 group-hover/social:text-gray-300 transition-colors">LinkedIn</span>
                         </a>
                         <a
                           href="https://github.com/syahrul-kustiawan-alzayyan"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-gray-400 hover:text-gray-300 transition-colors flex flex-col items-center"
+                          className="text-gray-400 hover:text-gray-300 transition-colors flex flex-col items-center group/social"
                           aria-label="GitHub"
                         >
-                          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mb-1">
-                            <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                          </svg>
-                          <span className="text-xs font-mono mt-1 text-gray-400">GitHub</span>
+                          <div className="w-12 h-12 rounded-full bg-gray-800/50 flex items-center justify-center mb-2 group-hover/social:bg-gradient-to-br group-hover/social:from-white group-hover/social:to-gray-400 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover/social:text-black">
+                              <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                          </div>
+                          <span className="text-xs font-mono mt-1 text-gray-400 group-hover/social:text-gray-300 transition-colors">GitHub</span>
                         </a>
-                        {/* Additional social links can be added here as needed */}
                       </div>
                     </div>
                   </div>
                 </div>
-
               </div>
             </motion.div>
 
@@ -174,7 +176,7 @@ const ContactPage = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <div className="bg-gray-900/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 shadow-sm">
-                <h2 className="text-2xl font-bold font-mono text-white mb-8">
+                <h2 className="text-3xl font-bold font-mono text-white mb-8 pb-4 border-b border-gray-700/50">
                   Send a Message
                 </h2>
 
@@ -188,7 +190,7 @@ const ContactPage = () => {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all"
+                        className="w-full px-5 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all"
                         placeholder="Your name"
                         required
                       />
@@ -202,7 +204,7 @@ const ContactPage = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all"
+                        className="w-full px-5 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all"
                         placeholder="your.email@example.com"
                         required
                       />
@@ -217,7 +219,7 @@ const ContactPage = () => {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all"
+                      className="w-full px-5 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all"
                       placeholder="What's this about?"
                       required
                     />
@@ -231,7 +233,7 @@ const ContactPage = () => {
                       value={formData.message}
                       onChange={handleChange}
                       rows={5}
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all resize-none"
+                      className="w-full px-5 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all resize-none"
                       placeholder="Your message here..."
                       required
                     ></textarea>
@@ -242,7 +244,7 @@ const ContactPage = () => {
                     className={`w-full py-4 rounded-lg font-mono flex items-center justify-center transition-all ${
                       isSubmitting
                         ? 'bg-gray-700 cursor-not-allowed text-gray-400'
-                        : 'bg-white text-black hover:bg-gray-200'
+                        : 'bg-gradient-to-r from-white to-gray-400 text-black hover:shadow-lg'
                     }`}
                     disabled={isSubmitting}
                     whileHover={!isSubmitting ? { scale: 1.02, y: -2 } : {}}
