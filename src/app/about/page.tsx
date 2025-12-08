@@ -61,10 +61,10 @@ const AboutPage = () => {
                     <div className="h-3 bg-gray-800 rounded-full overflow-hidden mt-2">
                       <div
                         className="h-full bg-gradient-to-r from-white to-gray-400 rounded-full"
-                        style={{ width: '40%' }}
+                        style={{ width: '70%' }}
                       ></div>
                     </div>
-                    <p className="text-right text-xs text-gray-500 mt-1">40% Proficient</p>
+                    <p className="text-right text-xs text-gray-500 mt-1">70% Proficient</p>
                   </div>
 
                   <div className="flex flex-wrap gap-2 justify-center">
@@ -92,19 +92,13 @@ const AboutPage = () => {
                 <h2 className="text-3xl font-bold font-mono text-white mb-6 pb-4 border-b border-gray-700/50">About Me</h2>
                 <div className="space-y-4">
                   <p className="text-gray-300 leading-relaxed text-lg">
-                    I'm a passionate data analyst with expertise in transforming complex datasets into
-                    actionable insights that drive business decisions. My experience spans across data
-                    processing, statistical analysis, machine learning, and visualization.
+                    A graduate of Informatics Engineering with internship experience as a Big Data Analyst and IT Staff, and a certified Data Analyst from Certiport with a perfect score. Skilled in data processing, statistical analysis, dashboard development, and generating business insights using Python, BigQuery, and Power BI.
                   </p>
                   <p className="text-gray-300 leading-relaxed text-lg">
-                    I specialize in using various data analysis tools and programming languages to
-                    extract meaningful patterns from data and present them in a clear, understandable
-                    format to stakeholders. My approach is centered on clear communication and delivering
-                    results that can be easily understood and acted upon.
+                    Experienced in managing end-to-end data workflows, including data gathering, data cleaning, exploratory data analysis, data visualization, and deployment of analytical results. Additionally capable of developing and evaluating machine learning models to support data-driven decision-making.
                   </p>
                   <p className="text-gray-300 leading-relaxed text-lg">
-                    When I'm not analyzing data, you can find me exploring new datasets, learning
-                    new analytical techniques, or contributing to open-source data projects.
+                    working in a structured manner, maintaining strong attention to detail, and contributing effectively within professional, data-oriented environments.
                   </p>
                 </div>
               </div>
