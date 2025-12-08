@@ -21,13 +21,20 @@ export async function getFeaturedProjects(): Promise<Project[]> {
 
 export async function getAllCategories(): Promise<string[]> {
   const allProjects = await getSortedProjectsData();
-  const categories = new Set(allProjects.map((project) => project.category));
+  const allProjectCategories = allProjects.flatMap((project) =>
+    Array.isArray(project.category) ? project.category : [project.category]
+  );
+  const categories = new Set(allProjectCategories);
   return Array.from(categories);
 }
 
 export async function getProjectsByCategory(category: string): Promise<Project[]> {
   const allProjects = await getSortedProjectsData();
-  return allProjects.filter((project) => project.category === category);
+  return allProjects.filter((project) =>
+    Array.isArray(project.category)
+      ? project.category.includes(category)
+      : project.category === category
+  );
 }
 
 export async function getProjectById(id: string): Promise<Project | undefined> {

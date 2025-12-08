@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
-import { motion } from 'framer-motion';
 import Layout from '@/components/Layout';
 import ProjectsClient from './ProjectsClient';
+import { Project } from '@/types/project';
 
 async function getProjectsData() {
   // Import dynamically to use Node.js fs module only on the server
@@ -11,15 +11,15 @@ async function getProjectsData() {
   const projectsDirectory = path.join(process.cwd(), 'src/data');
   const fullPath = path.join(projectsDirectory, 'projects.json');
   const fileContents = fs.readFileSync(fullPath, 'utf8');
-  const allProjects = JSON.parse(fileContents);
+  const allProjects: Project[] = JSON.parse(fileContents);
 
   // Extract all unique categories from the projects
-  const allProjectCategories = allProjects.flatMap((project: any) =>
+  const allProjectCategories = allProjects.flatMap((project) =>
     Array.isArray(project.category) ? project.category : [project.category]
   );
-  const categories = Array.from(new Set(allProjectCategories));
+  const allCategories = Array.from(new Set(allProjectCategories)) as string[];
 
-  return { allProjects, allCategories: categories };
+  return { allProjects, allCategories };
 }
 
 export default async function ProjectsPage() {

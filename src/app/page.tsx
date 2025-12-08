@@ -1,6 +1,7 @@
 import Layout from '@/components/Layout';
 import ProjectsServer from '@/components/projects/ProjectsServer';
 import HomeContent from './HomeContent';
+import { Project } from '@/types/project';
 
 async function getFeaturedProjects() {
   const fs = await import('fs');
@@ -9,9 +10,9 @@ async function getFeaturedProjects() {
   const projectsDirectory = path.join(process.cwd(), 'src/data');
   const fullPath = path.join(projectsDirectory, 'projects.json');
   const fileContents = fs.readFileSync(fullPath, 'utf8');
-  const allProjects = JSON.parse(fileContents);
+  const allProjects: Project[] = JSON.parse(fileContents);
 
-  return allProjects.filter((project: any) => project.featured);
+  return allProjects.filter((project) => project.featured);
 }
 
 export default async function Home() {

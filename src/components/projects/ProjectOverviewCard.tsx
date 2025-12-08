@@ -2,7 +2,7 @@
 
 import { Project } from '@/types/project';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import Link from 'next/link';
 
 interface ProjectOverviewCardProps {
@@ -23,7 +23,7 @@ const ProjectOverviewCard = ({ project, index = 0, showButtons = true }: Project
     video_preview
   } = project;
 
-  const cardVariants = {
+  const cardVariants: Variants = {
     hidden: {
       opacity: 0,
       y: 20,
@@ -35,7 +35,7 @@ const ProjectOverviewCard = ({ project, index = 0, showButtons = true }: Project
       scale: 1,
       transition: {
         duration: 0.4,
-        ease: "easeOut",
+        ease: [0.25, 0.1, 0.25, 1],
         delay: index * 0.05
       }
     },
@@ -44,7 +44,7 @@ const ProjectOverviewCard = ({ project, index = 0, showButtons = true }: Project
       scale: 1.01,
       transition: {
         duration: 0.3,
-        ease: "easeInOut"
+        ease: [0.25, 0.1, 0.25, 1]
       }
     }
   };
