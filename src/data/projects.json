@@ -3,7 +3,7 @@
   "id": "employee-attrition-analytics",
   "title": "Employee Attrition Analytics Dashboard",
   "summary": "Power BI dashboard to analyze employee turnover (16.12%) and uncover key attrition drivers across Sales & R&D departments. Delivered actionable HR retention initiatives targeting a -5% attrition reduction within 1 year.",
-  "thumbnail": "/images/thumbnails/SummaryDashboard.png",
+  "thumbnail": "./images/thumbnails/SummaryDashboard.png",
   "tags": [
     "Power BI",
     "HR Analytics",
@@ -28,7 +28,7 @@
   "id": "kimia-farma-big-data-analytics",
   "title": "Kimia Farma Big Data Analytics Project",
   "summary": "BigQuery & Looker Studio based performance analytics (2020–2023) for evaluating revenue trends, profitability, and customer experience across Kimia Farma branches. Delivered actionable business insights through a centralized analytics dashboard.",
-  "thumbnail": "/images/thumbnails/PerfomanceOverview.png",
+  "thumbnail": "./images/thumbnails/PerfomanceOverview.png",
   "tags": [
     "BigQuery",
     "SQL",
@@ -54,7 +54,7 @@
     "id": "bitcoin-analytics-suite",
     "title": "Bitcoin Analytics Suite",
     "summary": "Professional-grade financial analytics platform for Bitcoin featuring technical indicators, risk metrics, and machine learning-based price forecasting with interactive institutional-style dashboard.",
-    "thumbnail": "/images/thumbnails/FinancialPrediction.png",
+    "thumbnail": "./images/thumbnails/FinancialPrediction.png",
     "tags": [
       "Python",
       "Streamlit",
@@ -93,7 +93,7 @@
     "id": "iphone-transaction-analysis",
     "title": "iPhone Transaction Analysis & Performance Dashboard",
     "summary": "Power BI dashboard and Python-based analysis for understanding customer behavior, sales trends, and product performance in iPhone transactions. Includes full data cleaning, merging, and visualization workflow to support business intelligence and strategic insights.",
-    "thumbnail": "/images/thumbnails/iphoneDashoboard.png",
+    "thumbnail": "./images/thumbnails/iphoneDashoboard.png",
     "tags": [
       "Power BI",
       "Data Analysis",
