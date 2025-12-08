@@ -24,6 +24,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Syahrul Kustiawan Al Zayyan" }],
   creator: "Syahrul Kustiawan Al Zayyan",
   publisher: "Syahrul Kustiawan Al Zayyan",
+  icons: {
+    icon: '/portfolio.png',
+    shortcut: '/portfolio.png',
+    apple: '/portfolio.png',
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
