@@ -14,8 +14,8 @@ const nextConfig: NextConfig = {
 
 // Add basePath and assetPrefix for GitHub Pages deployment
 if (isGitHubPages) {
-  nextConfig.basePath = '/data_analyst_portfolio';
-  nextConfig.assetPrefix = '/data_analyst_portfolio/';
+  nextConfig.basePath = '/Data-Analyst-Portfolio';
+  nextConfig.assetPrefix = '/Data-Analyst-Portfolio/';
 }
 
 export default nextConfig;
