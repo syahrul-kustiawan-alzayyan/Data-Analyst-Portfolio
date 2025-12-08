@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import BentoGridOverview from '@/components/projects/BentoGridOverview';
+import CompactGridOverview from '@/components/projects/CompactGridOverview';
 
 interface HomeContentProps {
   featuredProjects: any[];
@@ -26,7 +26,7 @@ export default function HomeContent({ featuredProjects }: HomeContentProps) {
               className="mb-8"
             >
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-mono mb-6 tracking-tight">
-                <span className="text-white">Syahrul Kustiawan Al Zayyan</span>
+                <span className="bg-gradient-to-r from-gray-300 via-white to-gray-300 bg-clip-text text-transparent">Syahrul Kustiawan Al Zayyan</span>
               </h1>
               <div className="relative inline-block">
                 <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold font-mono mb-6 mt-4 text-white">
@@ -122,7 +122,7 @@ export default function HomeContent({ featuredProjects }: HomeContentProps) {
             </p>
           </motion.div>
 
-          <BentoGridOverview projects={featuredProjects} />
+          <CompactGridOverview projects={featuredProjects} />
 
           <motion.div
             className="text-center mt-12"

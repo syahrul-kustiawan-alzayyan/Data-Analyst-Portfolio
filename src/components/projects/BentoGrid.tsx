@@ -31,6 +31,7 @@ const BentoGrid = ({ projects }: BentoGridProps) => {
           key={project.id}
           project={project}
           index={index}
+          showButtons={true}
         />
       ))}
     </motion.div>

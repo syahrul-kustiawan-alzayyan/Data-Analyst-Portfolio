@@ -8,9 +8,10 @@ import Link from 'next/link';
 interface ProjectCardProps {
   project: Project;
   index?: number;
+  showButtons?: boolean;
 }
 
-const ProjectCard = ({ project, index = 0 }: ProjectCardProps) => {
+const ProjectCard = ({ project, index = 0, showButtons = true }: ProjectCardProps) => {
   const {
     id,
     title,
@@ -126,27 +127,29 @@ const ProjectCard = ({ project, index = 0 }: ProjectCardProps) => {
           {summary}
         </p>
 
-        <div className="flex flex-wrap gap-2 pt-2 border-t border-gray-700/50 mt-auto">
-          {links.github && (
-            <Link
-              href={links.github}
-              target="_blank"
-              className="text-xs flex items-center gap-1 text-gray-400 hover:text-white transition-colors duration-300"
-            >
-              <div className="i-lucide-github text-sm" /> GitHub
-            </Link>
-          )}
+        {showButtons && (
+          <div className="flex flex-wrap gap-2 pt-2 border-t border-gray-700/50 mt-auto">
+            {links.github && (
+              <Link
+                href={links.github}
+                target="_blank"
+                className="text-xs flex items-center gap-1 px-3 py-1.5 rounded-lg bg-gradient-to-r from-gray-700 to-gray-600 hover:from-gray-600 hover:to-gray-500 text-white font-medium transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md"
+              >
+                <div className="i-lucide-github text-sm" /> View Project
+              </Link>
+            )}
 
-          {links.demo && (
-            <Link
-              href={links.demo}
-              target="_blank"
-              className="text-xs flex items-center gap-1 text-gray-400 hover:text-white transition-colors duration-300"
-            >
-              <div className="i-lucide-external-link text-sm" /> Demo
-            </Link>
-          )}
-        </div>
+            {links.demo && (
+              <Link
+                href={links.demo}
+                target="_blank"
+                className="text-xs flex items-center gap-1 px-3 py-1.5 rounded-lg bg-gray-800 hover:bg-gray-700 text-white transition-colors duration-300"
+              >
+                <div className="i-lucide-external-link text-sm" /> Live Demo
+              </Link>
+            )}
+          </div>
+        )}
       </div>
 
       {/* Glow effect on hover */}

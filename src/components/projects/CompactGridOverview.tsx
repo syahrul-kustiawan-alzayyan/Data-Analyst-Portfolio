@@ -1,14 +1,14 @@
 'use client';
 
 import { Project } from '@/types/project';
-import ProjectOverviewCard from './ProjectOverviewCard';
+import CompactProjectCard from './CompactProjectCard';
 import { motion } from 'framer-motion';
 
-interface BentoGridOverviewProps {
+interface CompactGridOverviewProps {
   projects: Project[];
 }
 
-const BentoGridOverview = ({ projects }: BentoGridOverviewProps) => {
+const CompactGridOverview = ({ projects }: CompactGridOverviewProps) => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -21,21 +21,21 @@ const BentoGridOverview = ({ projects }: BentoGridOverviewProps) => {
 
   return (
     <motion.div
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
       {projects.map((project, index) => (
-        <ProjectOverviewCard
+        <CompactProjectCard
           key={project.id}
           project={project}
           index={index}
-          showButtons={true}
+          showButtons={false}
         />
       ))}
     </motion.div>
   );
 };
 
-export default BentoGridOverview;
+export default CompactGridOverview;

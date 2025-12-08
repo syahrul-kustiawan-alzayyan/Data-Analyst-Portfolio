@@ -1,33 +1,5 @@
 [
   {
-    "id": "bitcoin-analytics-suite",
-    "title": "Bitcoin Analytics Suite",
-    "summary": "Comprehensive Bitcoin market analysis platform with real-time price tracking, volatility analysis, and predictive modeling.",
-    "thumbnail": "/images/thumbnails/FinancialPrediction.png",
-    "tags": [
-      "Python",
-      "Bitcoin",
-      "Time Series Analysis",
-      "Data Visualization",
-      "Cryptocurrency"
-    ],
-    "category": [
-      "Data Analytics",
-      "Finance"
-    ],
-    "featured": true,
-    "grid_config": "col-span-2 row-span-2",
-    "metrics": [
-      { "label": "Data Points", "value": "Real-time" },
-      { "label": "Analysis Type", "value": "Predictive" },
-      { "label": "Market Coverage", "value": "Global" }
-    ],
-    "links": {
-      "github": "https://github.com/username/bitcoin-analytics-suite"
-    },
-    "theme_color": "#f7931a"
-  },
-  {
   "id": "employee-attrition-analytics",
   "title": "Employee Attrition Analytics Dashboard",
   "summary": "Power BI dashboard to analyze employee turnover (16.12%) and uncover key attrition drivers across Sales & R&D departments. Delivered actionable HR retention initiatives targeting a -5% attrition reduction within 1 year.",
@@ -39,10 +11,7 @@
     "DAX",
     "Business Intelligence"
   ],
-  "category": [
-    "Visualization",
-    "Business Intelligence"
-  ],
+  "category": "Visualization",
   "featured": true,
   "grid_config": "col-span-2 row-span-2",
   "metrics": [
@@ -54,8 +23,7 @@
     "github": "https://github.com/syahrul-kustiawan-alzayyan/HR-Analysis-dashboard"
   },
   "theme_color": "#00A3E0"
-}
-,
+  },
   {
   "id": "kimia-farma-big-data-analytics",
   "title": "Kimia Farma Big Data Analytics Project",
@@ -69,10 +37,7 @@
     "Business Intelligence",
     "Google Cloud Platform"
   ],
-  "category": [
-    "Business Analytics",
-    "Business Intelligence"
-  ],
+  "category": "Business Analytics",
   "featured": true,
   "grid_config": "col-span-2 row-span-2",
   "metrics": [
@@ -84,69 +49,69 @@
     "github": "https://github.com/syahrul-kustiawan-alzayyan/Kimia-Farma-Big-Data-Analytics"
   },
   "theme_color": "#FF6B00"
-},
-  {
-    "id": "etl-pipeline-python",
-    "title": "Automated ETL Pipeline",
-    "summary": "Built a robust ETL pipeline using Python and Airflow to process 1M+ daily records, reducing manual processing time by 80%.",
-    "thumbnail": "/images/thumbnails/SummaryDashboard.png",
-    "tags": ["Python", "Airflow", "ETL", "PostgreSQL", "Data Engineering"],
-    "category": [
-      "Data Engineering",
-      "Automation"
-    ],
-    "featured": true,
-    "grid_config": "col-span-1 row-span-1",
-    "metrics": [
-      { "label": "Records/Day", "value": "1M+" },
-      { "label": "Time Saved", "value": "80%" }
-    ],
-    "links": {
-      "github": "https://github.com/username/etl-pipeline"
-    },
-    "theme_color": "#39ff14",
-    "video_preview": "/videos/etl-pipeline-preview.webm"
   },
   {
-    "id": "churn-prediction-model",
-    "title": "Customer Churn Prediction",
-    "summary": "Developed a logistic regression model to predict customer churn with 90% precision, enabling proactive retention strategies.",
-    "thumbnail": "/images/thumbnails/PerfomanceOverview.png",
-    "tags": ["Python", "Logistic Regression", "Pandas", "Scikit-learn"],
-    "category": [
-      "Machine Learning",
-      "Predictive Analytics"
-    ],
-    "featured": false,
-    "grid_config": "col-span-1 row-span-1",
-    "metrics": [
-      { "label": "Model Precision", "value": "90%" },
-      { "label": "Accuracy", "value": "87%" }
-    ],
-    "links": {
-      "github": "https://github.com/username/churn-prediction"
-    },
-    "theme_color": "#d946ef"
-  },
-  {
-    "id": "financial-reporting-automation",
-    "title": "Financial Reporting Automation",
-    "summary": "Automated monthly financial reporting using Python, Excel, and SQL, reducing report generation time from 8 hours to 30 minutes.",
+    "id": "bitcoin-analytics-suite",
+    "title": "Bitcoin Analytics Suite",
+    "summary": "Professional-grade financial analytics platform for Bitcoin featuring technical indicators, risk metrics, and machine learning-based price forecasting with interactive institutional-style dashboard.",
     "thumbnail": "/images/thumbnails/FinancialPrediction.png",
-    "tags": ["Python", "Excel", "SQL", "Automation", "Finance"],
-    "category": [
-      "Business Intelligence",
-      "Automation"
+    "tags": [
+      "Python",
+      "Streamlit",
+      "Pandas",
+      "Scikit-learn",
+      "Prophet",
+      "LSTM",
+      "Plotly",
+      "TA-Lib",
+      "Time Series Forecasting",
+      "Risk Analysis"
     ],
-    "featured": false,
-    "grid_config": "col-span-1 row-span-1",
+    "category": "Predictive Analytics",
+    "featured": true,
+    "grid_config": "col-span-2 row-span-2",
     "metrics": [
-      { "label": "Time Reduction", "value": "93%" },
-      { "label": "Reports Generated", "value": "12/mo" }
+      {
+        "label": "Forecast MAPE",
+        "value": "1.5%"
+      },
+      {
+        "label": "Ensemble R²",
+        "value": "0.93"
+      },
+      {
+        "label": "Supported Indicators",
+        "value": "10+"
+      }
     ],
     "links": {
-      "github": "https://github.com/username/financial-reporting"
+      "github": "https://github.com/syahrul-kustiawan-alzayyan/bitcoin-analytics-price-prediction"
     },
-    "theme_color": "#00fefc"
+    "theme_color": "#39ff14"
+  },
+  {
+    "id": "iphone-transaction-analysis",
+    "title": "iPhone Transaction Analysis & Performance Dashboard",
+    "summary": "Power BI dashboard and Python-based analysis for understanding customer behavior, sales trends, and product performance in iPhone transactions. Includes full data cleaning, merging, and visualization workflow to support business intelligence and strategic insights.",
+    "thumbnail": "/images/thumbnails/iphoneDashoboard.png",
+    "tags": [
+      "Power BI",
+      "Data Analysis",
+      "Python",
+      "Business Intelligence",
+      "Data Visualization"
+    ],
+    "category": "Visualization",
+    "featured": true,
+    "grid_config": "col-span-2 row-span-2",
+    "metrics": [
+      { "label": "Datasets Processed", "value": "4 CSV Files" },
+      { "label": "Merged Final Dataset", "value": "1 Comprehensive Table" },
+      { "label": "Dashboard Sections", "value": "5 Insight Categories" }
+    ],
+    "links": {
+      "github": "https://github.com/syahrul-kustiawan-alzayyan/Iphone-Transaction-analys"
+    },
+    "theme_color": "#1A73E8"
   }
 ]

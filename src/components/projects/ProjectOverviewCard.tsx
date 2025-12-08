@@ -8,9 +8,10 @@ import Link from 'next/link';
 interface ProjectOverviewCardProps {
   project: Project;
   index?: number;
+  showButtons?: boolean;
 }
 
-const ProjectOverviewCard = ({ project, index = 0 }: ProjectOverviewCardProps) => {
+const ProjectOverviewCard = ({ project, index = 0, showButtons = true }: ProjectOverviewCardProps) => {
   const {
     id,
     title,
@@ -111,27 +112,29 @@ const ProjectOverviewCard = ({ project, index = 0 }: ProjectOverviewCardProps) =
           )}
         </div>
 
-        <div className="flex gap-3 pt-3 border-t border-gray-800 mt-auto">
-          {links.github && (
-            <Link
-              href={links.github}
-              target="_blank"
-              className="text-xs flex items-center gap-1 text-gray-400 hover:text-white transition-colors duration-300 group/link"
-            >
-              <div className="i-lucide-github text-sm group-hover/link:text-white transition-colors" /> GitHub
-            </Link>
-          )}
+        {showButtons && (
+          <div className="flex gap-3 pt-3 border-t border-gray-800 mt-auto">
+            {links.github && (
+              <Link
+                href={links.github}
+                target="_blank"
+                className="text-xs flex items-center gap-1 px-4 py-2.5 rounded-lg bg-gradient-to-r from-gray-700 to-gray-600 hover:from-gray-600 hover:to-gray-500 text-white font-medium transition-all duration-300 transform hover:scale-105 group/link shadow-md hover:shadow-lg"
+              >
+                <div className="i-lucide-github text-sm group-hover/link:text-white transition-colors" /> View Project
+              </Link>
+            )}
 
-          {links.demo && (
-            <Link
-              href={links.demo}
-              target="_blank"
-              className="text-xs flex items-center gap-1 text-gray-400 hover:text-white transition-colors duration-300 group/link"
-            >
-              <div className="i-lucide-external-link text-sm group-hover/link:text-white transition-colors" /> Demo
-            </Link>
-          )}
-        </div>
+            {links.demo && (
+              <Link
+                href={links.demo}
+                target="_blank"
+                className="text-xs flex items-center gap-1 px-4 py-2.5 rounded-lg bg-gray-800 hover:bg-gray-700 text-white transition-colors duration-300 group/link"
+              >
+                <div className="i-lucide-external-link text-sm group-hover/link:text-white transition-colors" /> Live Demo
+              </Link>
+            )}
+          </div>
+        )}
       </div>
     </motion.div>
   );
