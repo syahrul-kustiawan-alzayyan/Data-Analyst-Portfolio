@@ -20,15 +20,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Create CNAME file (optional - remove if not using custom domain)
-        run: |
-          echo "syahrul-kustiawan-alzayyan.github.io" > out/CNAME
-        if: always()
-
       - name: Build site for GitHub Pages
-        run: |
-          export DEPLOY_ENV=github-pages
-          npm run build
+        run: npm run build
+        env:
+          DEPLOY_ENV: github-pages
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

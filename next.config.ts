@@ -12,4 +12,7 @@ if (process.env.DEPLOY_ENV === 'github-pages') {
   nextConfig.assetPrefix = '/data_analyst_portfolio/';
 }
 
+// Ensure trailing slash for GitHub Pages compatibility
+nextConfig.trailingSlash = true;
+
 export default nextConfig;
