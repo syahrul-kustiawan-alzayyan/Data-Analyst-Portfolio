@@ -40,7 +40,7 @@ const AboutPage = () => {
                 <div className="flex flex-col items-center text-center">
                   <div className="w-48 h-48 rounded-full bg-gradient-to-br from-gray-800 to-gray-600 mb-6 overflow-hidden border-4 border-white/20 shadow-lg">
                     <img
-                      src="./images/foto Profil.png"
+                      src="/images/foto Profil.png"
                       alt="Syahrul Kustiawan Al Zayyan"
                       className="w-full h-full object-cover rounded-full"
                       onError={(e) => {

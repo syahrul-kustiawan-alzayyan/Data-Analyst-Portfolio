@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     siteName: "Syahrul Kustiawan Al Zayyan - Data Analyst Portfolio",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/images/portfolio.png",
         width: 1200,
         height: 630,
         alt: "Syahrul Kustiawan Al Zayyan - Data Analyst Portfolio",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Syahrul Kustiawan Al Zayyan - Data Analyst Portfolio",
     description: "Professional data analyst portfolio showcasing expertise in data analysis, visualization, and business intelligence.",
-    images: ["/og-image.jpg"],
+    images: ["/images/portfolio.png"],
   },
   robots: {
     index: true,
