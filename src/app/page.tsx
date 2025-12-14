@@ -10,7 +10,15 @@ async function getFeaturedProjects() {
   const projectsDirectory = path.join(process.cwd(), 'src/data');
   const fullPath = path.join(projectsDirectory, 'projects.json');
   const fileContents = fs.readFileSync(fullPath, 'utf8');
-  const allProjects: Project[] = JSON.parse(fileContents);
+  let allProjects: Project[] = JSON.parse(fileContents);
+
+  // Add base path prefix for GitHub Pages deployment
+  if (process.env.DEPLOY_ENV === 'github-pages' || process.env.GITHUB_ACTIONS === 'true') {
+    allProjects = allProjects.map(project => ({
+      ...project,
+      thumbnail: `/Data-Analyst-Portfolio${project.thumbnail}`
+    }));
+  }
 
   return allProjects.filter((project) => project.featured);
 }
