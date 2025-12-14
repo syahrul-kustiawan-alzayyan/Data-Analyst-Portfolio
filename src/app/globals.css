@@ -41,6 +41,8 @@ body {
   font-family: var(--font-inter);
   position: relative;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Remove the subtle texture background */
@@ -61,25 +63,25 @@ body {
 
 /* Ensure all components have transparent or dark backgrounds by default */
 .bg-white {
-  background-color: #111111 !important;
+  background-color: #111111;
 }
 
 .bg-gray-50 {
-  background-color: #0a0a0a !important;
+  background-color: #0a0a0a;
 }
 
 .bg-gray-100 {
-  background-color: #1a1a1a !important;
+  background-color: #1a1a1a;
 }
 
 /* Override any background colors that might cover the animated background */
 main, section, article, div {
-  background-color: transparent !important;
+  background-color: transparent;
 }
 
 /* Prevent any default white backgrounds from overriding the animated background */
 .backdrop-blur-sm, .backdrop-blur-md, .backdrop-blur-lg {
-  background-color: transparent !important;
+  background-color: transparent;
 }
 
 /* Scrollbar styling for better contrast */
@@ -193,4 +195,144 @@ main, section, article, div {
 
 .border-contrast-hover:hover {
   border-color: var(--hover-border);
+}
+
+/* Mobile responsive improvements */
+
+/* Adjust padding and margins for mobile */
+@media (max-width: 768px) {
+  .container {
+    @apply px-4;
+  }
+
+  /* Adjust hero section for mobile */
+  .min-h-\[90vh\] {
+    min-height: 80vh;
+  }
+
+  /* Adjust text sizes for better readability on mobile */
+  h1 {
+    @apply text-3xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-xl md:text-3xl lg:text-4xl;
+  }
+
+  h3 {
+    @apply text-lg md:text-2xl;
+  }
+
+  /* Improve button touch targets */
+  button, .btn, a {
+    min-height: 44px; /* Minimum touch target size */
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Adjust button padding for better mobile touch */
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline {
+    @apply px-6 py-3 md:px-8 md:py-4;
+  }
+
+  /* Improve navigation on mobile */
+  .mobile-nav-menu {
+    @apply fixed inset-0 z-50 bg-black flex flex-col items-center justify-center;
+  }
+
+  .mobile-nav-item {
+    @apply text-2xl font-mono py-4 px-8 rounded-full text-center mb-4;
+  }
+
+  /* Adjust section padding for mobile */
+  section {
+    @apply py-12;
+  }
+
+  /* Improve card spacing on mobile */
+  .card {
+    @apply p-4;
+  }
+
+  .card-highlight {
+    @apply p-6;
+  }
+
+  /* Adjust grid layouts for mobile */
+  .grid {
+    @apply gap-4;
+  }
+
+  /* Better spacing for mobile typography */
+  p, span, div {
+    line-height: 1.6;
+  }
+
+  /* Ensure images scale properly */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Improve form elements for mobile */
+  input, textarea, select {
+    @apply py-3 px-4;
+  }
+
+  /* Adjust floating dock for mobile */
+  .floating-dock {
+    @apply bottom-4;
+  }
+}
+
+/* Extra small devices (phones, 640px and below) */
+@media (max-width: 640px) {
+  .container {
+    @apply px-4;
+  }
+
+  /* Even more conservative spacing for very small screens */
+  h1 {
+    @apply text-2xl md:text-4xl;
+  }
+
+  h2 {
+    @apply text-lg md:text-2xl;
+  }
+
+  .text-lg {
+    @apply text-base;
+  }
+
+  .text-xl {
+    @apply text-lg;
+  }
+
+  .text-2xl {
+    @apply text-xl;
+  }
+
+  /* Adjust button sizing on very small screens */
+  button, .btn {
+    @apply px-4 py-2;
+  }
+
+  /* Reduce section padding */
+  section {
+    @apply py-8;
+  }
+
+  /* Adjust image sizes */
+  .w-16, .h-16 {
+    @apply w-12 h-12;
+  }
+
+  /* Adjust font sizes in cards */
+  .card h3 {
+    @apply text-lg;
+  }
 }

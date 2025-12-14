@@ -102,12 +102,12 @@ const ProjectCard = ({ project, index = 0, showButtons = true }: ProjectCardProp
         />
       </div>
 
-      <div className="p-4 z-20 relative flex flex-col min-h-[160px]">
-        <div className="flex flex-wrap gap-1.5 mb-2">
+      <div className="p-2.5 sm:p-3.5 md:p-4 z-20 relative flex flex-col min-h-[140px] sm:min-h-[160px]">
+        <div className="flex flex-wrap gap-1 mb-1 sm:mb-2">
           {tags.map((tag, idx) => (
             <span
               key={idx}
-              className="text-xs px-2 py-0.5 rounded-full bg-gray-800 text-gray-300 border border-gray-600 font-mono"
+              className="text-[0.65rem] sm:text-xs px-1.5 py-0.5 rounded-full bg-gray-800 text-gray-300 border border-gray-600 font-mono"
               style={{
                 borderColor: '#ffffff' + '40',
                 color: '#ffffff',
@@ -119,23 +119,25 @@ const ProjectCard = ({ project, index = 0, showButtons = true }: ProjectCardProp
           ))}
         </div>
 
-        <h3 className="text-base font-bold font-mono text-white mb-1 group-hover:text-gray-200 transition-colors duration-300 flex-shrink-0">
+        <h3 className="text-sm font-bold font-mono text-white mb-1 group-hover:text-gray-200 transition-colors duration-300 flex-shrink-0">
           {title}
         </h3>
 
-        <p className="text-xs text-gray-400 mb-3 flex-grow line-clamp-3">
+        <p className="text-[0.7rem] sm:text-xs md:text-sm text-gray-400 mb-2 sm:mb-3 flex-grow line-clamp-3">
           {summary}
         </p>
 
         {showButtons && (
-          <div className="flex flex-wrap gap-2 pt-2 border-t border-gray-700/50 mt-auto">
+          <div className="flex flex-col flex-wrap gap-1.5 sm:gap-2 pt-2 border-t border-gray-700/50 mt-auto">
             {links.github && (
               <Link
                 href={links.github}
                 target="_blank"
-                className="text-xs flex items-center gap-1 px-3 py-1.5 rounded-lg bg-gradient-to-r from-gray-700 to-gray-600 hover:from-gray-600 hover:to-gray-500 text-white font-medium transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md"
+                className="text-[0.65rem] sm:text-xs flex items-center justify-center gap-0.5 px-2 py-1 sm:px-3 sm:py-1.5 rounded-md sm:rounded-lg bg-gradient-to-r from-gray-700 to-gray-600 hover:from-gray-600 hover:to-gray-500 text-white font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-sm hover:shadow-md min-h-[28px] sm:min-h-[32px]"
               >
-                <div className="i-lucide-github text-sm" /> View Project
+                <div className="i-lucide-github text-[0.8rem] sm:text-sm" />
+                <span className="hidden sm:block">View Project</span>
+                <span className="sm:hidden">Code</span>
               </Link>
             )}
 
@@ -143,9 +145,11 @@ const ProjectCard = ({ project, index = 0, showButtons = true }: ProjectCardProp
               <Link
                 href={links.demo}
                 target="_blank"
-                className="text-xs flex items-center gap-1 px-3 py-1.5 rounded-lg bg-gray-800 hover:bg-gray-700 text-white transition-colors duration-300"
+                className="text-[0.65rem] sm:text-xs flex items-center justify-center gap-0.5 px-2 py-1 sm:px-3 sm:py-1.5 rounded-md sm:rounded-lg bg-gray-800 hover:bg-gray-700 text-white transition-colors duration-300 min-h-[28px] sm:min-h-[32px]"
               >
-                <div className="i-lucide-external-link text-sm" /> Live Demo
+                <div className="i-lucide-external-link text-[0.8rem] sm:text-sm" />
+                <span className="hidden sm:block">Live Demo</span>
+                <span className="sm:hidden">Demo</span>
               </Link>
             )}
           </div>

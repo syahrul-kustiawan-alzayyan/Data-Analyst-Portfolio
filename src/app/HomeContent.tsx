@@ -25,11 +25,11 @@ export default function HomeContent({ featuredProjects }: HomeContentProps) {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mb-8"
             >
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-mono mb-6 tracking-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold font-mono mb-4 sm:mb-6 tracking-tight">
                 <span className="bg-gradient-to-r from-gray-300 via-white to-gray-300 bg-clip-text text-transparent">Syahrul Kustiawan Al Zayyan</span>
               </h1>
               <div className="relative inline-block">
-                <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold font-mono mb-6 mt-4 text-white">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold font-mono mb-4 mt-2 sm:mt-4 text-white">
                   Data Analyst
                 </h2>
                 <motion.div
@@ -42,7 +42,7 @@ export default function HomeContent({ featuredProjects }: HomeContentProps) {
             </motion.div>
 
             <motion.p
-              className="text-lg md:text-xl text-gray-300 mb-10 font-sans max-w-3xl mx-auto leading-relaxed"
+              className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-10 font-sans max-w-2xl sm:max-w-3xl mx-auto leading-relaxed"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
@@ -54,27 +54,27 @@ export default function HomeContent({ featuredProjects }: HomeContentProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
-              className="mb-16"
+              className="mb-10 sm:mb-16"
             >
-              <div className="inline-flex items-center px-6 py-3 bg-gray-800 border border-gray-600 rounded-full font-mono text-white shadow-md">
-                <span className="flex h-3 w-3 relative mr-3">
+              <div className="inline-flex items-center px-4 py-2.5 sm:px-6 sm:py-3 bg-gray-800 border border-gray-600 rounded-full font-mono text-white shadow-md">
+                <span className="flex h-2.5 w-2.5 sm:h-3 sm:w-3 relative mr-2 sm:mr-3">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-600"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 sm:h-3 sm:w-3 bg-green-600"></span>
                 </span>
-                Available for new opportunities
+                <span className="text-sm sm:text-base">Available for new opportunities</span>
               </div>
             </motion.div>
 
             {/* CTA Buttons */}
             <motion.div
-              className="flex flex-col sm:flex-row justify-center gap-4"
+              className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-3"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.6 }}
             >
               <motion.a
                 href="#projects"
-                className="px-8 py-4 bg-black text-white font-mono rounded-full inline-block text-center border border-gray-600 hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="px-4 py-2.5 sm:px-6 sm:py-3 md:px-8 md:py-4 bg-black text-white font-mono rounded-full text-sm sm:text-base inline-block text-center border border-gray-600 hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl min-h-[40px] sm:min-h-[44px] flex items-center justify-center"
                 whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -82,7 +82,7 @@ export default function HomeContent({ featuredProjects }: HomeContentProps) {
               </motion.a>
               <motion.a
                 href="/contact"
-                className="px-8 py-4 bg-black text-white font-mono rounded-full inline-block text-center border border-gray-600 hover:bg-gray-800 transition-all duration-300 shadow-md hover:shadow-lg"
+                className="px-4 py-2.5 sm:px-6 sm:py-3 md:px-8 md:py-4 bg-black text-white font-mono rounded-full text-sm sm:text-base inline-block text-center border border-gray-600 hover:bg-gray-800 transition-all duration-300 shadow-md hover:shadow-lg min-h-[40px] sm:min-h-[44px] flex items-center justify-center"
                 whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -106,18 +106,18 @@ export default function HomeContent({ featuredProjects }: HomeContentProps) {
       <section className="py-24 bg-black">
         <div className="container mx-auto px-4">
           <motion.div
-            className="text-center mb-20"
+            className="text-center mb-10 sm:mb-20"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-block mb-6">
-              <h2 className="text-3xl md:text-4xl font-bold font-mono text-white">
+            <div className="inline-block mb-4 sm:mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-mono text-white">
                 Featured Projects
               </h2>
             </div>
-            <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+            <p className="text-gray-400 max-w-xs sm:max-w-2xl mx-auto text-base sm:text-lg">
               Showcasing impactful data analysis and visualization solutions
             </p>
           </motion.div>
@@ -125,7 +125,7 @@ export default function HomeContent({ featuredProjects }: HomeContentProps) {
           <CompactGridOverview projects={featuredProjects} />
 
           <motion.div
-            className="text-center mt-12"
+            className="text-center mt-8 sm:mt-12"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -133,10 +133,10 @@ export default function HomeContent({ featuredProjects }: HomeContentProps) {
           >
             <a
               href="/projects"
-              className="inline-flex items-center px-8 py-4 bg-black text-white font-mono rounded-full hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl border border-gray-600"
+              className="inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base bg-black text-white font-mono rounded-full hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl border border-gray-600 min-h-[40px] sm:min-h-[44px]"
             >
               View All Projects
-              <div className="i-lucide-arrow-right ml-2 text-lg" />
+              <div className="i-lucide-arrow-right ml-1.5 sm:ml-2 text-base sm:text-lg" />
             </a>
           </motion.div>
         </div>
@@ -162,7 +162,7 @@ export default function HomeContent({ featuredProjects }: HomeContentProps) {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
             {[
               { name: 'Data Visualization', icon: 'bar-chart', description: 'Creating compelling visual representations of complex data' },
               { name: 'Machine Learning', icon: 'bot', description: 'Building predictive models and algorithms for data insights' },
@@ -171,15 +171,15 @@ export default function HomeContent({ featuredProjects }: HomeContentProps) {
             ].map((skill, index) => (
               <motion.div
                 key={skill.name}
-                className="bg-gray-900/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-gray-600 transition-all shadow-md hover:shadow-xl group"
+                className="bg-gray-900/80 backdrop-blur-sm rounded-lg sm:rounded-xl md:rounded-2xl p-3 sm:p-4 md:p-6 border border-gray-700 hover:border-gray-600 transition-all shadow-md hover:shadow-xl group"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                whileHover={{ y: -10 }}
+                whileHover={{ y: -3 }}
               >
-                <div className="w-16 h-16 rounded-xl bg-gray-800 flex items-center justify-center mb-6 group-hover:bg-gray-700 transition-colors">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <div className="w-10 h-10 sm:w-12 md:w-16 sm:h-12 md:h-16 rounded-md sm:rounded-lg md:rounded-xl bg-gray-800 flex items-center justify-center mb-2 sm:mb-3 md:mb-6 group-hover:bg-gray-700 transition-colors">
+                  <svg className="w-5 h-5 sm:w-6 md:w-8 sm:h-6 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     {skill.icon === 'bar-chart' && (
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     )}
@@ -194,8 +194,8 @@ export default function HomeContent({ featuredProjects }: HomeContentProps) {
                     )}
                   </svg>
                 </div>
-                <h3 className="font-bold text-xl text-white mb-3">{skill.name}</h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
+                <h3 className="font-bold text-base sm:text-lg md:text-xl text-white mb-1 sm:mb-2 md:mb-3">{skill.name}</h3>
+                <p className="text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed">
                   {skill.description}
                 </p>
               </motion.div>
@@ -203,7 +203,7 @@ export default function HomeContent({ featuredProjects }: HomeContentProps) {
           </div>
 
           <motion.div
-            className="text-center mt-16"
+            className="text-center mt-12 sm:mt-16"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -211,10 +211,10 @@ export default function HomeContent({ featuredProjects }: HomeContentProps) {
           >
             <a
               href="/skills"
-              className="inline-flex items-center px-8 py-4 bg-black text-white font-mono rounded-full hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl border border-gray-700"
+              className="inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base bg-black text-white font-mono rounded-full hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl border border-gray-700 min-h-[40px] sm:min-h-[44px]"
             >
               View Full Skills
-              <div className="i-lucide-arrow-right ml-2 text-lg" />
+              <div className="i-lucide-arrow-right ml-1.5 sm:ml-2 text-base sm:text-lg" />
             </a>
           </motion.div>
         </div>

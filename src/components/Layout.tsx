@@ -15,7 +15,7 @@ const Layout = ({ children }: LayoutProps) => {
     <div className="relative min-h-screen overflow-x-hidden">
       <AnimatedBackground />
       <Header />
-      <main className="pt-16 pb-24 relative z-10 min-h-screen bg-transparent">
+      <main className="pt-16 pb-16 sm:pb-24 relative z-10 min-h-screen bg-transparent">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

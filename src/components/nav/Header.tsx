@@ -89,10 +89,15 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-gray-300 p-2 rounded-lg hover:bg-gray-700 transition-colors"
+            className="md:hidden text-gray-300 p-3 rounded-lg hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle navigation menu"
           >
-            <div className="i-lucide-menu text-2xl" />
+            {mobileMenuOpen ? (
+              <div className="i-lucide-x text-2xl" />
+            ) : (
+              <div className="i-lucide-menu text-2xl" />
+            )}
           </button>
         </div>
       </motion.header>
@@ -101,14 +106,16 @@ const Header = () => {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            className="fixed inset-0 z-30 bg-black flex flex-col items-center justify-center md:hidden"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/95 backdrop-blur-lg flex flex-col items-center justify-center md:hidden"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
+            transition={{ type: "spring", damping: 25, stiffness: 300 }}
           >
             <button
-              className="absolute top-6 right-6 text-gray-200 p-2 rounded-full hover:bg-gray-800 transition-colors"
+              className="absolute top-6 right-6 text-gray-200 p-3 rounded-full hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500"
               onClick={() => setMobileMenuOpen(false)}
+              aria-label="Close navigation menu"
             >
               <div className="i-lucide-x text-2xl" />
             </button>
@@ -117,7 +124,7 @@ const Header = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="flex flex-col items-center space-y-10"
+              className="flex flex-col items-center space-y-6 mt-16"
             >
               {navItems.map((item, index) => {
                 const isActive = pathname === item.href;
@@ -128,12 +135,15 @@ const Header = () => {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     <motion.div
-                      className={`text-2xl font-mono py-3 px-8 rounded-full transition-all ${
+                      className={`text-3xl font-mono py-4 px-8 rounded-xl transition-all ${
                         isActive
-                          ? 'text-white bg-gray-800 font-bold border border-gray-600'
-                          : 'text-gray-200 hover:text-white'
+                          ? 'text-white bg-gray-800 font-bold border border-gray-600 w-48 text-center'
+                          : 'text-gray-200 hover:text-white hover:bg-gray-800/50 w-48 text-center'
                       }`}
-                      whileHover={{ scale: 1.1, x: 5 }}
+                      whileHover={{
+                        scale: 1.05,
+                        backgroundColor: isActive ? 'rgba(55, 65, 81, 1)' : 'rgba(55, 65, 81, 0.5)'
+                      }}
                       whileTap={{ scale: 0.95 }}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
