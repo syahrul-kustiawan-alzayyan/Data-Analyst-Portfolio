@@ -43,9 +43,7 @@ jobs:
 
       - name: Build site for GitHub Pages
         run: |
-          npm run build-gh-pages
-        env:
-          DEPLOY_ENV: github-pages
+          npx cross-env DEPLOY_ENV=github-pages npm run build-gh-pages
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
