@@ -9,9 +9,6 @@ const nextConfig: NextConfig = {
   basePath: process.env.DEPLOY_ENV === 'github-pages' || process.env.GITHUB_ACTIONS === 'true'
     ? '/Data-Analyst-Portfolio'
     : '',
-  assetPrefix: process.env.DEPLOY_ENV === 'github-pages' || process.env.GITHUB_ACTIONS === 'true'
-    ? '/Data-Analyst-Portfolio/'
-    : undefined,
 };
 
 export default nextConfig;
