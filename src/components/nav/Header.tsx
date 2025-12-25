@@ -90,17 +90,15 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-white p-3 rounded-lg bg-gray-800/70 backdrop-blur-sm border border-gray-600 hover:bg-gray-700/90 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="md:hidden text-white p-3 rounded-lg bg-gray-800 border border-gray-600 hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle navigation menu"
           >
-            <div className="relative">
-              {mobileMenuOpen ? (
-                <div className="i-lucide-x text-xl flex items-center justify-center" />
-              ) : (
-                <div className="i-lucide-menu text-xl flex items-center justify-center" />
-              )}
-            </div>
+            {mobileMenuOpen ? (
+              <div className="i-lucide-x" />
+            ) : (
+              <div className="i-lucide-menu" />
+            )}
           </button>
         </div>
       </motion.header>
@@ -116,11 +114,11 @@ const Header = () => {
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
           >
             <button
-              className="absolute top-6 right-6 text-white p-3 rounded-full bg-gray-800/70 backdrop-blur-sm border border-gray-600 hover:bg-gray-700/90 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500"
+              className="absolute top-6 right-6 text-white p-3 rounded-lg bg-gray-800 border border-gray-600 hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500"
               onClick={() => setMobileMenuOpen(false)}
               aria-label="Close navigation menu"
             >
-              <div className="i-lucide-x text-xl flex items-center justify-center" />
+              <div className="i-lucide-x" />
             </button>
 
             <motion.div

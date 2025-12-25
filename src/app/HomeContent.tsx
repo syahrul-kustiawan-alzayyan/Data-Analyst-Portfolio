@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import CompactGridOverview from '@/components/projects/CompactGridOverview';
+import { getAssetPath } from '@/lib/image-utils';
 
 interface HomeContentProps {
   featuredProjects: any[];
@@ -132,7 +133,7 @@ export default function HomeContent({ featuredProjects }: HomeContentProps) {
             transition={{ delay: 0.3 }}
           >
             <a
-              href="/projects"
+              href={getAssetPath('/projects')}
               className="inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base bg-black text-white font-mono rounded-full hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl border border-gray-600 min-h-[40px] sm:min-h-[44px]"
             >
               View All Projects
@@ -210,7 +211,7 @@ export default function HomeContent({ featuredProjects }: HomeContentProps) {
             transition={{ delay: 0.5 }}
           >
             <a
-              href="/skills"
+              href={getAssetPath('/skills')}
               className="inline-flex items-center px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base bg-black text-white font-mono rounded-full hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl border border-gray-700 min-h-[40px] sm:min-h-[44px]"
             >
               View Full Skills

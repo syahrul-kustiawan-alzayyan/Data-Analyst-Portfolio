@@ -71,9 +71,9 @@ const SkillsContent = () => {
             </div>
           </div>
 
-          <div className="h-96 bg-gray-900/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 shadow-sm">
+          <div className="h-96 min-h-[384px] bg-gray-900/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 shadow-sm">
             {activeTab === 'radar' ? (
-              <ResponsiveContainer width="100%" height="100%">
+              <ResponsiveContainer width="100%" height={384}>
                 <RadarChart cx="50%" cy="50%" outerRadius="70%" data={skillsData}>
                   <PolarGrid stroke="rgba(255, 255, 255, 0.1)" radialLines={true} />
                   <PolarAngleAxis
@@ -113,7 +113,7 @@ const SkillsContent = () => {
                 </RadarChart>
               </ResponsiveContainer>
             ) : (
-              <ResponsiveContainer width="100%" height="100%">
+              <ResponsiveContainer width="100%" height={384}>
                 <BarChart
                   data={skillsData}
                   margin={{
