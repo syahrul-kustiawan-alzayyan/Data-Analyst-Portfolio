@@ -27,7 +27,9 @@ async function getProjectsData() {
     }));
   }
 
-  return { allProjects, allCategories };
+  // Sort projects from newest to oldest (reverse the order)
+  const sortedProjects = [...allProjects].reverse();
+  return { allProjects: sortedProjects, allCategories };
 }
 
 export default async function ProjectsPage() {

@@ -166,7 +166,7 @@ export default function HomeContent({ featuredProjects }: HomeContentProps) {
             {[
               { name: 'Data Visualization', icon: 'bar-chart', description: 'Creating compelling visual representations of complex data' },
               { name: 'Machine Learning', icon: 'bot', description: 'Building predictive models and algorithms for data insights' },
-              { name: 'Statistical Analysis', icon: 'calculator', description: 'Applying statistical methods to interpret data trends' },
+              { name: 'Data Gathering', icon: 'calculator', description: 'Collecting and aggregating data from diverse sources' },
               { name: 'Database Management', icon: 'database', description: 'Designing and managing data storage solutions' }
             ].map((skill, index) => (
               <motion.div

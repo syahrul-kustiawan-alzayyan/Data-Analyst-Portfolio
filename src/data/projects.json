@@ -11,7 +11,7 @@
     "DAX",
     "Business Intelligence"
   ],
-  "category": "Visualization",
+  "category": "Data Visualization",
   "featured": true,
   "grid_config": "col-span-2 row-span-2",
   "metrics": [
@@ -37,7 +37,7 @@
     "Business Intelligence",
     "Google Cloud Platform"
   ],
-  "category": "Business Analytics",
+  "category": "Business Intelligence",
   "featured": true,
   "grid_config": "col-span-2 row-span-2",
   "metrics": [
@@ -52,7 +52,7 @@
   },
   {
     "id": "bitcoin-analytics-suite",
-    "title": "Prediction Model & Financial Analytics Suite for Bitcoin",
+    "title": "Prediction Model Development & Financial Analytics",
     "summary": "Professional-grade financial analytics platform for Bitcoin featuring technical indicators, risk metrics, and machine learning-based price forecasting with interactive institutional-style dashboard.",
     "thumbnail": "/images/thumbnails/FinancialPrediction.png",
     "tags": [
@@ -67,7 +67,7 @@
       "Time Series Forecasting",
       "Risk Analysis"
     ],
-    "category": "Predictive Analytics",
+    "category": "Model Development",
     "featured": true,
     "grid_config": "col-span-2 row-span-2",
     "metrics": [
@@ -101,7 +101,7 @@
       "Business Intelligence",
       "Data Visualization"
     ],
-    "category": "Visualization",
+    "category": "Business Intelligence",
     "featured": true,
     "grid_config": "col-span-2 row-span-2",
     "metrics": [
@@ -113,5 +113,31 @@
       "github": "https://github.com/syahrul-kustiawan-alzayyan/Iphone-sales-performance"
     },
     "theme_color": "#1A73E8"
+  },
+  {
+    "id": "mbg-sentiment-analysis",
+    "title": "MBG Sentiment Analysis Platform & Dashboard",
+    "summary": "End-to-end data pipeline to monitor public sentiment regarding Indonesia's 'Makan Bergizi Gratis' program. Features resilient Twitter/X scraping, MongoDB storage, and Indonesian-specific NLP via HuggingFace, visualized in an interactive Power BI dashboard.",
+    "thumbnail": "/images/thumbnails/MBG-Sentiment.png",
+    "tags": [
+      "Python",
+      "ETL Automation",
+      "Web Scraping",
+      "MongoDB",
+      "NLP (Transformers)",
+      "Power BI"
+    ],
+    "category": "Web Scraping",
+    "featured": true,
+    "grid_config": "col-span-2 row-span-2",
+    "metrics": [
+      { "label": "Positive Sentiment", "value": "~45%" },
+      { "label": "Pipeline Type", "value": "Automated ETL" },
+      { "label": "Model", "value": "Indonesian Transformer" }
+    ],
+    "links": {
+      "github": "https://github.com/syahrul-kustiawan-alzayyan/ETL-Automation-Web-Scraping-MBG"
+    },
+    "theme_color": "#1DA1F2"
   }
 ]

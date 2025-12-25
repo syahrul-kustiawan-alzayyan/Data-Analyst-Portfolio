@@ -19,14 +19,17 @@ const CompactGridOverview = ({ projects }: CompactGridOverviewProps) => {
     }
   };
 
+  // Limit to maximum 5 projects
+  const limitedProjects = projects.slice(0, 5);
+
   return (
     <motion.div
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
-      {projects.map((project, index) => (
+      {limitedProjects.map((project, index) => (
         <CompactProjectCard
           key={project.id}
           project={project}

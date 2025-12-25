@@ -128,16 +128,15 @@ const ProjectCard = ({ project, index = 0, showButtons = true }: ProjectCardProp
         </p>
 
         {showButtons && (
-          <div className="flex flex-col flex-wrap gap-1.5 sm:gap-2 pt-2 border-t border-gray-700/50 mt-auto">
+          <div className="flex flex-wrap gap-1.5 pt-2 border-t border-gray-700/50 mt-auto">
             {links.github && (
               <Link
                 href={links.github}
                 target="_blank"
-                className="text-[0.65rem] sm:text-xs flex items-center justify-center gap-0.5 px-2 py-1 sm:px-3 sm:py-1.5 rounded-md sm:rounded-lg bg-gradient-to-r from-gray-700 to-gray-600 hover:from-gray-600 hover:to-gray-500 text-white font-medium transition-all duration-300 transform hover:scale-[1.02] shadow-sm hover:shadow-md min-h-[28px] sm:min-h-[32px]"
+                className="flex items-center justify-center gap-1 px-2 py-1 rounded-md bg-gray-800 hover:bg-gray-700 text-white transition-colors text-xs min-h-[24px]"
               >
-                <div className="i-lucide-github text-[0.8rem] sm:text-sm" />
-                <span className="hidden sm:block">View Project</span>
-                <span className="sm:hidden">Code</span>
+                <div className="i-lucide-github text-xs" />
+                <span>Code</span>
               </Link>
             )}
 
@@ -145,11 +144,10 @@ const ProjectCard = ({ project, index = 0, showButtons = true }: ProjectCardProp
               <Link
                 href={links.demo}
                 target="_blank"
-                className="text-[0.65rem] sm:text-xs flex items-center justify-center gap-0.5 px-2 py-1 sm:px-3 sm:py-1.5 rounded-md sm:rounded-lg bg-gray-800 hover:bg-gray-700 text-white transition-colors duration-300 min-h-[28px] sm:min-h-[32px]"
+                className="flex items-center justify-center gap-1 px-2 py-1 rounded-md bg-gray-800 hover:bg-gray-700 text-white transition-colors text-xs min-h-[24px]"
               >
-                <div className="i-lucide-external-link text-[0.8rem] sm:text-sm" />
-                <span className="hidden sm:block">Live Demo</span>
-                <span className="sm:hidden">Demo</span>
+                <div className="i-lucide-external-link text-xs" />
+                <span>Demo</span>
               </Link>
             )}
           </div>

@@ -20,7 +20,7 @@ async function getFeaturedProjects() {
     }));
   }
 
-  return allProjects.filter((project) => project.featured);
+  return allProjects.filter((project) => project.featured).reverse();
 }
 
 export default async function Home() {

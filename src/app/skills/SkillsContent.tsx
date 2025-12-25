@@ -181,12 +181,12 @@ const SkillsContent = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { name: 'Data Processing', items: ['Python', 'Pandas', 'NumPy', 'SQL'], icon: 'code' },
-              { name: 'Visualization', items: ['Tableau', 'Matplotlib', 'PowerBI'], icon: 'bar-chart-4' },
-              { name: 'Machine Learning', items: ['Scikit-learn', 'TensorFlow', 'Keras', 'XGBoost'], icon: 'bot' },
-              { name: 'Database Management', items: ['MySQL', 'MongoDB'], icon: 'hard-drive' },
-              { name: 'Statistical Analysis', items: ['Excel', 'Spreadsheet'], icon: 'calculator' },
-              { name: 'Communication', items: ['Presentations', 'Reporting', 'Documentation'], icon: 'presentation' },
+              { name: 'Data Processing', items: ['Python', 'Pandas', 'NumPy', 'SQL', 'DAX'], icon: 'code' },
+              { name: 'Visualization', items: ['Tableau', 'Matplotlib', 'PowerBI', 'Looker Studio', 'Plotly'], icon: 'bar-chart-4' },
+              { name: 'Machine Learning', items: ['Scikit-learn', 'TensorFlow', 'Keras', 'XGBoost', 'Prophet', 'LSTM'], icon: 'bot' },
+              { name: 'Database Management', items: ['MySQL', 'MongoDB', 'BigQuery', 'Data Warehousing'], icon: 'hard-drive' },
+              { name: 'Data Gathering', items: ['Selenium', 'BeautifulSoup', 'Web Scraping', 'ETL Automation', 'API Integration', 'NLP'], icon: 'calculator' },
+              { name: 'Business Intelligence', items: ['Power BI', 'Looker Studio', 'DAX', 'Business Analytics', 'HR Analytics'], icon: 'presentation' },
             ].map((skillGroup, index) => (
               <motion.div
                 key={skillGroup.name}
