@@ -41,7 +41,7 @@ const AboutPage = () => {
                 <div className="flex flex-col items-center text-center">
                   <div className="w-48 h-48 rounded-full bg-gradient-to-br from-gray-800 to-gray-600 mb-6 overflow-hidden border-4 border-white/20 shadow-lg">
                     <img
-                      src={getAssetPath("/images/foto Profil.png")}
+                      src={getAssetPath("/images/foto-Profil.png")}
                       alt="Syahrul Kustiawan Al Zayyan"
                       className="w-full h-full object-cover rounded-full"
                       onError={(e) => {
@@ -146,8 +146,8 @@ const AboutPage = () => {
                 Interested in my experience and qualifications? Download my CV for more detailed information.
               </p>
               <a
-                href="/documents/CV-Syahrul Kustiawan Al Zayyan.pdf"
-                download="CV-Syahrul_Kustiawan_Al_Zayyan.pdf"
+                href="/documents/CV-Syahrul-Kustiawan-Al-Zayyan.pdf"
+                download="CV-Syahrul-Kustiawan-Al-Zayyan.pdf"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-white to-gray-400 text-black font-mono rounded-full hover:shadow-md transition-all duration-300 transform hover:scale-105"
               >
                 <svg
