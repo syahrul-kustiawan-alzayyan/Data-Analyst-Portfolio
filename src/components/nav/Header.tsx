@@ -48,7 +48,7 @@ const Header = () => {
           >
             <Link href="/" className="flex items-center">
               <img
-                src={getAssetPath("/images/Logo.png")}
+                src={getAssetPath("./images/Logo.png")}
                 alt="Portfolio Logo"
                 width={32}
                 height={32}
